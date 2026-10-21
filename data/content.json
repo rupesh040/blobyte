@@ -19,10 +19,26 @@
       { "label": "Contact Us", "href": "/contact", "isActive": false }
     ],
     "socials": [
-      { "platform": "facebook", "url": "https://facebook.com", "ariaLabel": "Facebook" },
-      { "platform": "pinterest", "url": "https://pinterest.com", "ariaLabel": "Pinterest" },
-      { "platform": "twitter", "url": "https://twitter.com", "ariaLabel": "Twitter / X" },
-      { "platform": "linkedin", "url": "https://linkedin.com", "ariaLabel": "LinkedIn" }
+      {
+        "platform": "facebook",
+        "url": "https://facebook.com",
+        "ariaLabel": "Facebook"
+      },
+      {
+        "platform": "pinterest",
+        "url": "https://pinterest.com",
+        "ariaLabel": "Pinterest"
+      },
+      {
+        "platform": "twitter",
+        "url": "https://twitter.com",
+        "ariaLabel": "Twitter / X"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://linkedin.com",
+        "ariaLabel": "LinkedIn"
+      }
     ]
   },
   "hero": {
@@ -61,10 +77,7 @@
     "title": "ABOUT",
     "subtitle": "A Food Journal with a Personal Touch",
     "image": "/page-banner.webp",
-    "breadcrumbs": [
-      { "label": "Home", "href": "/" },
-      { "label": "About" }
-    ]
+    "breadcrumbs": [{ "label": "Home", "href": "/" }, { "label": "About" }]
   },
   "about": {
     "badge": "MEET THE CHEF",
@@ -113,7 +126,10 @@
           "name": "Elena Rostova"
         },
         "ingredients": [
-          { "item": "Mixed wild mushrooms (cremini, shiitake, oyster)", "amount": "500g" },
+          {
+            "item": "Mixed wild mushrooms (cremini, shiitake, oyster)",
+            "amount": "500g"
+          },
           { "item": "Fresh thyme sprigs", "amount": "4 sprigs" },
           { "item": "Shallots, finely chopped", "amount": "2 large" },
           { "item": "Garlic cloves, minced", "amount": "3 cloves" },
@@ -149,7 +165,10 @@
         },
         "ingredients": [
           { "item": "Spaghetti or bronze-die tagliatelle", "amount": "250g" },
-          { "item": "San Marzano whole peeled tomatoes", "amount": "1 can (400g)" },
+          {
+            "item": "San Marzano whole peeled tomatoes",
+            "amount": "1 can (400g)"
+          },
           { "item": "Fresh sweet basil leaves", "amount": "1 cup" },
           { "item": "Garlic cloves, thinly sliced", "amount": "4 cloves" },
           { "item": "Aged Parmigiano Reggiano, grated", "amount": "1/2 cup" },
@@ -181,11 +200,17 @@
           "name": "Elena Rostova"
         },
         "ingredients": [
-          { "item": "Thick slice artisanal sourdough bread", "amount": "1 slice" },
+          {
+            "item": "Thick slice artisanal sourdough bread",
+            "amount": "1 slice"
+          },
           { "item": "Ripe Hass avocado", "amount": "1 whole" },
           { "item": "Pasture-raised egg", "amount": "1 egg" },
           { "item": "Fresh lemon juice", "amount": "1 tsp" },
-          { "item": "Aleppo chili flakes or red pepper flakes", "amount": "1/4 tsp" },
+          {
+            "item": "Aleppo chili flakes or red pepper flakes",
+            "amount": "1/4 tsp"
+          },
           { "item": "Microgreens and flaky sea salt", "amount": "to garnish" }
         ],
         "instructions": [
@@ -253,7 +278,10 @@
           { "item": "Eggs", "amount": "2 whole" },
           { "item": "Ground Ceylon cinnamon", "amount": "1/2 tsp" },
           { "item": "Baking powder", "amount": "1 tsp" },
-          { "item": "Wild mountain honey & blueberries", "amount": "for topping" }
+          {
+            "item": "Wild mountain honey & blueberries",
+            "amount": "for topping"
+          }
         ],
         "instructions": [
           "Blend rolled oats, bananas, eggs, cinnamon, and baking powder in a blender until smooth batter forms.",
@@ -1129,11 +1157,31 @@
       { "label": "Contact Us", "href": "/contact" }
     ],
     "socials": [
-      { "platform": "facebook", "url": "https://facebook.com", "ariaLabel": "Facebook" },
-      { "platform": "instagram", "url": "https://instagram.com", "ariaLabel": "Instagram" },
-      { "platform": "youtube", "url": "https://youtube.com", "ariaLabel": "YouTube" },
-      { "platform": "pinterest", "url": "https://pinterest.com", "ariaLabel": "Pinterest" },
-      { "platform": "twitter", "url": "https://twitter.com", "ariaLabel": "Twitter / X" }
+      {
+        "platform": "facebook",
+        "url": "https://facebook.com",
+        "ariaLabel": "Facebook"
+      },
+      {
+        "platform": "instagram",
+        "url": "https://instagram.com",
+        "ariaLabel": "Instagram"
+      },
+      {
+        "platform": "youtube",
+        "url": "https://youtube.com",
+        "ariaLabel": "YouTube"
+      },
+      {
+        "platform": "pinterest",
+        "url": "https://pinterest.com",
+        "ariaLabel": "Pinterest"
+      },
+      {
+        "platform": "twitter",
+        "url": "https://twitter.com",
+        "ariaLabel": "Twitter / X"
+      }
     ],
     "copyright": "© 2026 All Rights Reserved. Powered by Lestow"
   }
