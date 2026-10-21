@@ -101,7 +101,7 @@ export const Navbar: React.FC<NavbarProps> = ({ data }) => {
             })}
           </nav>
 
-          <div className="hidden sm:flex items-center space-x-2.5">
+          <div className="hidden md:flex items-center space-x-2.5">
             {socials.map((social) => (
               <motion.a
                 key={social.platform}
@@ -113,7 +113,7 @@ export const Navbar: React.FC<NavbarProps> = ({ data }) => {
                 whileTap={{ scale: 0.95 }}
                 className="w-8 h-8 rounded-full border border-neutral-300/80 bg-white/60 flex items-center justify-center text-neutral-700 hover:text-white hover:border-neutral-900 hover:bg-neutral-900 transition-all duration-200 shadow-2xs"
               >
-                <SocialIcon platform={social.platform} />
+                <SocialIcon platform={social.platform} className="w-4 h-4" />
               </motion.a>
             ))}
           </div>
@@ -167,7 +167,7 @@ export const Navbar: React.FC<NavbarProps> = ({ data }) => {
                       aria-label={social.ariaLabel}
                       className="w-8 h-8 rounded-full border border-neutral-300 bg-white flex items-center justify-center text-neutral-700 hover:bg-neutral-900 hover:text-white transition-colors"
                     >
-                      <SocialIcon platform={social.platform} />
+                      <SocialIcon platform={social.platform} className="w-4 h-4" />
                     </a>
                   ))}
                 </div>
