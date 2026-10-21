@@ -1,0 +1,1140 @@
+{
+  "site": {
+    "name": "BLOBYTE",
+    "tagline": "Artful Cooking, Simply Crafted",
+    "description": "A collection of recipes that turn everyday cooking into art.",
+    "logoImage": "/logo.png"
+  },
+  "navbar": {
+    "logo": {
+      "brandName": "BLOBYTE",
+      "image": "/logo.png",
+      "subtext": "FOOD STORIES | RECIPES | REVIEWS"
+    },
+    "navigation": [
+      { "label": "Home", "href": "/", "isActive": true },
+      { "label": "About Us", "href": "/about", "isActive": false },
+      { "label": "Blog", "href": "/blog", "isActive": false },
+      { "label": "Faqs", "href": "/faq", "isActive": false },
+      { "label": "Contact Us", "href": "/contact", "isActive": false }
+    ],
+    "socials": [
+      { "platform": "facebook", "url": "https://facebook.com", "ariaLabel": "Facebook" },
+      { "platform": "pinterest", "url": "https://pinterest.com", "ariaLabel": "Pinterest" },
+      { "platform": "twitter", "url": "https://twitter.com", "ariaLabel": "Twitter / X" },
+      { "platform": "linkedin", "url": "https://linkedin.com", "ariaLabel": "LinkedIn" }
+    ]
+  },
+  "hero": {
+    "cards": [
+      {
+        "id": "hero-card-1",
+        "title": "Fresh Forest Mushrooms",
+        "alt": "Earthy king oyster and forest mushrooms",
+        "image": "https://images.unsplash.com/photo-1509358271058-acd22cc93898?auto=format&fit=crop&w=800&q=80",
+        "caption": "Wild Harvest",
+        "orientation": "portrait"
+      },
+      {
+        "id": "hero-card-2",
+        "title": "Wild Mushroom Risotto",
+        "alt": "Artisan risotto bowl with fresh herbs and parmesan",
+        "image": "https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?auto=format&fit=crop&w=1000&q=80",
+        "caption": "Signature Dish",
+        "orientation": "portrait"
+      },
+      {
+        "id": "hero-card-3",
+        "title": "Artisanal Ribbon Pasta",
+        "alt": "Freshly crafted tagliatelle pasta ribbons",
+        "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80",
+        "caption": "Handmade Daily",
+        "orientation": "portrait"
+      }
+    ],
+    "tagline": "Artful Cooking, Simply Crafted",
+    "description": "A collection of recipes that turn everyday cooking into art.",
+    "ctaText": "EXPLORE THE KITCHEN",
+    "ctaHref": "#recipes"
+  },
+  "pageBanner": {
+    "title": "ABOUT",
+    "subtitle": "A Food Journal with a Personal Touch",
+    "image": "/page-banner.webp",
+    "breadcrumbs": [
+      { "label": "Home", "href": "/" },
+      { "label": "About" }
+    ]
+  },
+  "about": {
+    "badge": "MEET THE CHEF",
+    "title": "A Food Journal with a Personal Touch",
+    "chefName": "Elena Rostova",
+    "chefRole": "Executive Chef & Recipe Developer",
+    "chefImage": "/about.webp",
+    "paragraphs": [
+      "Welcome to my culinary sanctuary. Every dish holds a memory, and every kitchen tells an intimate story. From seasonal morning produce gathered at local markets to slow-cooked comfort classics that bring families together, here is where honest cooking thrives.",
+      "Whether you are a seasoned home chef refining your technique or stepping into the kitchen for the very first time, my mission is to inspire your everyday journey with confidence, warmth, and unhurried culinary joy."
+    ],
+    "ctaText": "READ OUR STORY",
+    "ctaHref": "#about"
+  },
+  "recipesSection": {
+    "kicker": "FEATURED RECIPES",
+    "title": "Every",
+    "titleAccent": "Recipe",
+    "subtitle": "Tells a Story",
+    "categories": [
+      "ALL",
+      "SOUPS",
+      "PASTA",
+      "BREAKFAST",
+      "SALADS",
+      "MAIN COURSE",
+      "DESSERTS",
+      "SNACKS"
+    ],
+    "items": [
+      {
+        "id": "recipe-1",
+        "title": "Roasted Mushroom Soup with Thyme",
+        "slug": "roasted-mushroom-soup-with-thyme",
+        "category": "SOUPS",
+        "cookingTime": "30 MINUTES",
+        "servings": "4 SERV",
+        "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&q=80",
+        "description": "A velvety, earth-rich soup blending roasted cremini and shiitake mushrooms with fresh garden thyme, slow-cooked shallots, and a touch of crème fraîche.",
+        "isFeatured": true,
+        "difficulty": "Easy",
+        "calories": "240 kcal",
+        "rating": 4.9,
+        "reviewsCount": 42,
+        "author": {
+          "name": "Elena Rostova"
+        },
+        "ingredients": [
+          { "item": "Mixed wild mushrooms (cremini, shiitake, oyster)", "amount": "500g" },
+          { "item": "Fresh thyme sprigs", "amount": "4 sprigs" },
+          { "item": "Shallots, finely chopped", "amount": "2 large" },
+          { "item": "Garlic cloves, minced", "amount": "3 cloves" },
+          { "item": "Vegetable or chicken stock", "amount": "4 cups" },
+          { "item": "Heavy cream or cashew cream", "amount": "1/2 cup" },
+          { "item": "Extra virgin olive oil", "amount": "2 tbsp" },
+          { "item": "Sea salt and cracked black pepper", "amount": "to taste" }
+        ],
+        "instructions": [
+          "Toss trimmed mushrooms with olive oil, fresh thyme, and salt; roast at 200°C (400°F) for 20 minutes until deeply golden.",
+          "In a heavy-bottomed Dutch oven, soften diced shallots and garlic in butter over medium heat.",
+          "Add roasted mushrooms, reserving a few for garnish, then pour in warm vegetable broth. Simmer for 15 minutes.",
+          "Blend with an immersion blender until silken, stir in heavy cream, and season with cracked black pepper and crispy thyme leaves."
+        ],
+        "tags": ["Comfort Food", "Autumn", "Gluten-Free", "Vegetarian"]
+      },
+      {
+        "id": "recipe-2",
+        "title": "Classic Tomato Basil Pasta with Parmesan",
+        "slug": "classic-tomato-basil-pasta-parmesan",
+        "category": "PASTA",
+        "cookingTime": "25 MINUTES",
+        "servings": "2 SERV",
+        "image": "/classic-pasta.jpg",
+        "description": "Al dente artisanal spaghetti tossed in sweet San Marzano tomato sugo, hand-torn sweet basil, cold-pressed olive oil, and aged Parmigiano Reggiano.",
+        "isFeatured": true,
+        "difficulty": "Easy",
+        "calories": "460 kcal",
+        "rating": 4.95,
+        "reviewsCount": 68,
+        "author": {
+          "name": "Elena Rostova"
+        },
+        "ingredients": [
+          { "item": "Spaghetti or bronze-die tagliatelle", "amount": "250g" },
+          { "item": "San Marzano whole peeled tomatoes", "amount": "1 can (400g)" },
+          { "item": "Fresh sweet basil leaves", "amount": "1 cup" },
+          { "item": "Garlic cloves, thinly sliced", "amount": "4 cloves" },
+          { "item": "Aged Parmigiano Reggiano, grated", "amount": "1/2 cup" },
+          { "item": "Extra virgin olive oil", "amount": "3 tbsp" }
+        ],
+        "instructions": [
+          "Bring a large pot of heavily salted water to a rolling boil and cook spaghetti until 2 minutes shy of al dente.",
+          "In a wide skillet, gently sizzle sliced garlic in olive oil until aromatic without browning.",
+          "Crush tomatoes by hand into the pan, simmer for 12 minutes with a pinch of salt and a sprig of basil.",
+          "Transfer pasta directly into the sauce with a splash of starchy pasta water. Emulsify over high heat and top with grated parmesan and fresh basil."
+        ],
+        "tags": ["Italian", "Quick Dinner", "Pasta", "Vegetarian"]
+      },
+      {
+        "id": "recipe-3",
+        "title": "Avocado Toast with Poached Egg",
+        "slug": "avocado-toast-poached-egg",
+        "category": "BREAKFAST",
+        "cookingTime": "15 MINUTES",
+        "servings": "1 SERV",
+        "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=800&q=80",
+        "description": "Crusty naturally leavened sourdough topped with citrus-mashed Hass avocado, a delicate runny poached egg, chili flakes, and microgreens.",
+        "isFeatured": false,
+        "difficulty": "Easy",
+        "calories": "320 kcal",
+        "rating": 4.88,
+        "reviewsCount": 35,
+        "author": {
+          "name": "Elena Rostova"
+        },
+        "ingredients": [
+          { "item": "Thick slice artisanal sourdough bread", "amount": "1 slice" },
+          { "item": "Ripe Hass avocado", "amount": "1 whole" },
+          { "item": "Pasture-raised egg", "amount": "1 egg" },
+          { "item": "Fresh lemon juice", "amount": "1 tsp" },
+          { "item": "Aleppo chili flakes or red pepper flakes", "amount": "1/4 tsp" },
+          { "item": "Microgreens and flaky sea salt", "amount": "to garnish" }
+        ],
+        "instructions": [
+          "Toast sourdough until golden, crunchy, and fragrant.",
+          "Mash avocado with lemon juice, sea salt, and black pepper; spread evenly across warm toast.",
+          "Bring water with a dash of white vinegar to a gentle simmer, swirl a vortex, and poach the egg for 3 minutes.",
+          "Place poached egg atop avocado, sprinkle with chili flakes, flaky salt, and microgreens."
+        ],
+        "tags": ["Healthy", "Breakfast", "Brunch", "Quick"]
+      },
+      {
+        "id": "recipe-4",
+        "title": "Mediterranean Chicken Quinoa Bowl",
+        "slug": "mediterranean-chicken-quinoa-bowl",
+        "category": "SALADS",
+        "cookingTime": "35 MINUTES",
+        "servings": "2 SERV",
+        "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+        "description": "Herb-marinated grilled chicken breast served over fluffy tri-color quinoa with crisp cucumbers, heirloom cherry tomatoes, kalamata olives, and crumbled feta.",
+        "isFeatured": false,
+        "difficulty": "Medium",
+        "calories": "510 kcal",
+        "rating": 4.92,
+        "reviewsCount": 54,
+        "author": {
+          "name": "Elena Rostova"
+        },
+        "ingredients": [
+          { "item": "Organic chicken breast", "amount": "300g" },
+          { "item": "Cooked tri-color quinoa", "amount": "2 cups" },
+          { "item": "Persian cucumbers, sliced", "amount": "2" },
+          { "item": "Cherry tomatoes, halved", "amount": "1 cup" },
+          { "item": "Kalamata olives, pitted", "amount": "1/3 cup" },
+          { "item": "Greek feta cheese, crumbled", "amount": "60g" },
+          { "item": "Lemon herb vinaigrette", "amount": "3 tbsp" }
+        ],
+        "instructions": [
+          "Marinate chicken in olive oil, oregano, lemon zest, garlic, and sea salt for 20 minutes.",
+          "Grill chicken over medium-high heat for 6-7 minutes per side until charred and internal temp hits 74°C (165°F).",
+          "Assemble bowls with warm quinoa at base, arranged with sliced chicken, cucumbers, tomatoes, and olives.",
+          "Sprinkle generously with crumbled sheep’s milk feta and drizzle with fresh lemon herb vinaigrette."
+        ],
+        "tags": ["High Protein", "Salad", "Mediterranean", "Clean Eating"]
+      },
+      {
+        "id": "recipe-5",
+        "title": "Banana Oat Pancakes with Honey",
+        "slug": "banana-oat-pancakes-with-honey",
+        "category": "BREAKFAST",
+        "cookingTime": "20 MINUTES",
+        "servings": "3 SERV",
+        "image": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=800&q=80",
+        "description": "Wholesome flourless pancakes made from rolled oats, ripe sweet bananas, cinnamon, and organic eggs. Served warm with raw wild blossom honey.",
+        "isFeatured": false,
+        "difficulty": "Easy",
+        "calories": "290 kcal",
+        "rating": 4.85,
+        "reviewsCount": 29,
+        "author": {
+          "name": "Elena Rostova"
+        },
+        "ingredients": [
+          { "item": "Ripe bananas, peeled", "amount": "2 large" },
+          { "item": "Rolled whole oats", "amount": "1.5 cups" },
+          { "item": "Eggs", "amount": "2 whole" },
+          { "item": "Ground Ceylon cinnamon", "amount": "1/2 tsp" },
+          { "item": "Baking powder", "amount": "1 tsp" },
+          { "item": "Wild mountain honey & blueberries", "amount": "for topping" }
+        ],
+        "instructions": [
+          "Blend rolled oats, bananas, eggs, cinnamon, and baking powder in a blender until smooth batter forms.",
+          "Heat a lightly buttered skillet over medium-low heat; pour 1/4 cup batter per pancake.",
+          "Cook until bubbles burst on the surface (about 2-3 minutes), then flip and cook for another 1-2 minutes.",
+          "Stack tall, garnish with fresh banana slices, plump blueberries, and a generous stream of golden honey."
+        ],
+        "tags": ["Breakfast", "Naturally Sweetened", "Healthy", "Kids Favorite"]
+      },
+      {
+        "id": "recipe-6",
+        "title": "Grilled Chicken Rice Bowl with Roasted Veggies",
+        "slug": "grilled-chicken-rice-bowl-roasted-veggies",
+        "category": "MAIN COURSE",
+        "cookingTime": "40 MINUTES",
+        "servings": "2 SERV",
+        "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80",
+        "description": "Tender spiced grilled chicken over jasmine rice, paired with roasted zucchini, bell peppers, sweet red onions, and a zesty chimichurri drizzle.",
+        "isFeatured": false,
+        "difficulty": "Medium",
+        "calories": "580 kcal",
+        "rating": 4.91,
+        "reviewsCount": 47,
+        "author": {
+          "name": "Elena Rostova"
+        },
+        "ingredients": [
+          { "item": "Chicken thighs or breast", "amount": "350g" },
+          { "item": "Cooked jasmine or brown rice", "amount": "2 cups" },
+          { "item": "Zucchini, diced", "amount": "1 medium" },
+          { "item": "Red and yellow bell peppers", "amount": "2 sliced" },
+          { "item": "Smoked paprika and ground cumin", "amount": "1 tsp each" },
+          { "item": "Fresh cilantro chimichurri", "amount": "3 tbsp" }
+        ],
+        "instructions": [
+          "Toss diced zucchini and peppers in olive oil, paprika, salt, and roast at 210°C (410°F) for 20 minutes.",
+          "Season chicken with cumin, paprika, garlic powder, and grill until juicy and lightly charred.",
+          "Portion warm jasmine rice into deep ceramic bowls, arrange roasted vegetables and sliced chicken on top.",
+          "Finish with freshly chopped cilantro and a spoonful of vibrant herbal chimichurri."
+        ],
+        "tags": ["Dinner", "High Protein", "Meal Prep", "Main Course"]
+      },
+      {
+        "id": "recipe-7",
+        "title": "Soft & Chewy Chocolate Chip Cookies",
+        "slug": "soft-chewy-chocolate-chip-cookies",
+        "category": "DESSERTS",
+        "cookingTime": "45 MINUTES",
+        "servings": "12 SERV",
+        "image": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=80",
+        "description": "Bakery-style golden cookies boasting crisp caramelized edges, soft molten centers, bittersweet 70% dark chocolate wafers, and Maldon sea salt flakes.",
+        "isFeatured": false,
+        "difficulty": "Easy",
+        "calories": "210 kcal / cookie",
+        "rating": 4.98,
+        "reviewsCount": 94,
+        "author": {
+          "name": "Elena Rostova"
+        },
+        "ingredients": [
+          { "item": "Browned unsalted butter", "amount": "1/2 cup (115g)" },
+          { "item": "Dark brown sugar", "amount": "3/4 cup" },
+          { "item": "Granulated white sugar", "amount": "1/4 cup" },
+          { "item": "All-purpose flour", "amount": "1 1/2 cups" },
+          { "item": "70% bittersweet chocolate chunks", "amount": "180g" },
+          { "item": "Maldon sea salt flakes", "amount": "for sprinkling" }
+        ],
+        "instructions": [
+          "Brown butter in a saucepan until nutty and fragrant; cool slightly and whisk with sugars, egg, and vanilla.",
+          "Fold in flour, baking soda, and salt until just combined; fold through dark chocolate chunks.",
+          "Chill dough for at least 30 minutes. Scoop generous balls onto parchment-lined baking sheets.",
+          "Bake at 180°C (350°F) for 10-12 minutes until golden on edges. Immediately sprinkle with flaky sea salt."
+        ],
+        "tags": ["Dessert", "Baking", "Chocolate", "Indulgence"]
+      },
+      {
+        "id": "recipe-8",
+        "title": "Crunchy Veggie Wrap with Hummus",
+        "slug": "crunchy-veggie-wrap-hummus",
+        "category": "SNACKS",
+        "cookingTime": "15 MINUTES",
+        "servings": "2 SERV",
+        "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80",
+        "description": "Whole wheat flatbread rolled with garlic roasted hummus, julienned rainbow carrots, baby spinach, crisp cucumbers, and purple cabbage with tahini.",
+        "isFeatured": false,
+        "difficulty": "Easy",
+        "calories": "270 kcal",
+        "rating": 4.82,
+        "reviewsCount": 21,
+        "author": {
+          "name": "Elena Rostova"
+        },
+        "ingredients": [
+          { "item": "Whole wheat wraps or tortillas", "amount": "2 large" },
+          { "item": "Creamy roasted garlic hummus", "amount": "1/2 cup" },
+          { "item": "Shredded purple cabbage", "amount": "1 cup" },
+          { "item": "Julienned carrots", "amount": "1/2 cup" },
+          { "item": "Baby spinach leaves", "amount": "1 cup" },
+          { "item": "Cucumber ribbons", "amount": "1/2 cup" },
+          { "item": "Lemon tahini drizzle", "amount": "2 tbsp" }
+        ],
+        "instructions": [
+          "Warm the whole wheat wraps slightly in a dry pan until pliable.",
+          "Spread a thick layer of roasted garlic hummus across the center of each wrap.",
+          "Layer baby spinach, shredded purple cabbage, julienned carrots, and cucumber ribbons.",
+          "Drizzle with lemon tahini, fold sides inwards tightly, roll into a snug burrito, and slice diagonally."
+        ],
+        "tags": ["Snack", "Vegan", "Quick", "Healthy"]
+      }
+    ]
+  },
+  "featuredRecipe": {
+    "badge": "FEATURED RECIPE",
+    "title": "Fresh Flavors from My",
+    "titleHighlight": "Kitchen",
+    "description": "Simple ingredients crafted into delicious everyday meals.",
+    "ctaText": "EXPLORE RECIPE",
+    "ctaHref": "#featured",
+    "mainCard": {
+      "title": "Creamy Garlic Mushroom Pasta",
+      "description": "A rich and comforting weeknight dinner ready in just 25 minutes. Made with garlic, parmesan, and fresh herbs.",
+      "image": "https://images.unsplash.com/photo-1608897013039-887f21d8c804?auto=format&fit=crop&w=1000&q=80",
+      "cookingTime": "25 MINUTES",
+      "servings": "2 SERV"
+    },
+    "backgroundCards": [
+      {
+        "id": "bg-card-1",
+        "label": "Seasonal Fungi",
+        "image": "https://images.unsplash.com/photo-1509358271058-acd22cc93898?auto=format&fit=crop&w=600&q=80",
+        "rotationClass": "-rotate-12"
+      },
+      {
+        "id": "bg-card-2",
+        "label": "Aged Parmigiano",
+        "image": "https://images.unsplash.com/photo-1452195100486-9cc805987862?auto=format&fit=crop&w=600&q=80",
+        "rotationClass": "rotate-12"
+      }
+    ]
+  },
+  "momentsGallery": {
+    "kicker": "FOLLOW ON INSTAGRAM",
+    "title": "Delicious Moments from",
+    "titleHighlight": "My Kitchen",
+    "subtitle": "Follow along for daily recipes, behind the scenes and fresh food inspiration. Let's make everyday cooking a little more special!",
+    "items": [
+      {
+        "id": "moment-1",
+        "image": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=600&q=80",
+        "title": "Sunday banana oat pancakes with fresh berries",
+        "likes": 1420,
+        "instagramUrl": "https://instagram.com"
+      },
+      {
+        "id": "moment-2",
+        "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=600&q=80",
+        "title": "Slow-simmered roasted tomato and pepper soup",
+        "likes": 985,
+        "instagramUrl": "https://instagram.com"
+      },
+      {
+        "id": "moment-3",
+        "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=600&q=80",
+        "title": "Crisp sourdough toast with soft-poached egg",
+        "likes": 2150,
+        "instagramUrl": "https://instagram.com"
+      },
+      {
+        "id": "moment-4",
+        "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80",
+        "title": "Rainbow gardenF harvest salad with tahini dressing",
+        "likes": 1130,
+        "instagramUrl": "https://instagram.com"
+      },
+      {
+        "id": "moment-5",
+        "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80",
+        "title": "Double dark chocolate espresso walnut loaf",
+        "likes": 3280,
+        "instagramUrl": "https://instagram.com"
+      },
+      {
+        "id": "moment-6",
+        "image": "/classic-pasta.jpg",
+        "title": "Silky garlic butter fettuccine with fresh herbs",
+        "likes": 1845,
+        "instagramUrl": "https://instagram.com"
+      }
+    ]
+  },
+  "blogSection": {
+    "kicker": "OUR BLOGS",
+    "title": "Stories,",
+    "titleHighlight": "Recipes",
+    "titleSuffix": "& More",
+    "subtitle": "Simple recipes, kitchen tips and food stories to inspire your everyday cooking.",
+    "posts": [
+      {
+        "id": "blog-1",
+        "slug": "creamy-mushroom-pasta-cozy-dinner",
+        "category": "RECIPES",
+        "title": "Creamy Mushroom Pasta for a Cozy Dinner",
+        "excerpt": "A rich and comforting pasta made with fresh mushrooms, garlic and a creamy sauce – perfect for busy weeknights.",
+        "date": "June 10, 2025",
+        "readTime": "5 Min Read",
+        "image": "/blog-pasta.jpg",
+        "author": "Elena Rostova",
+        "intro": "There's something truly comforting about a bowl of creamy pasta, and this mushroom pasta is a timeless favorite. With earthy mushrooms, fragrant garlic and a rich, velvety sauce, it's a simple yet elegant dish that comes together in no time. Whether you're cooking for yourself or sharing with family, this recipe is sure to bring warmth and satisfaction to the table.",
+        "ingredients": [
+          "250g pasta (fettuccine or penne)",
+          "200g mushrooms, sliced",
+          "3 cloves garlic, minced",
+          "1 cup heavy cream",
+          "½ cup grated parmesan cheese",
+          "2 tbsp olive oil",
+          "1 tbsp butter",
+          "Salt and black pepper to taste",
+          "Fresh parsley for garnish",
+          "Optional: chili flakes for extra flavor"
+        ],
+        "instructions": [
+          {
+            "step": "01",
+            "title": "Cook the Pasta",
+            "description": "Boil pasta in salted water until al dente. Drain and set aside."
+          },
+          {
+            "step": "02",
+            "title": "Sauté the Mushrooms",
+            "description": "In a large pan, heat olive oil and butter. Add sliced mushrooms and cook until golden and tender."
+          },
+          {
+            "step": "03",
+            "title": "Add Garlic & Cream",
+            "description": "Stir in minced garlic and cook for a minute. Pour in the heavy cream and let it simmer."
+          },
+          {
+            "step": "04",
+            "title": "Combine & Season",
+            "description": "Add the cooked pasta, parmesan cheese, salt and pepper. Toss well until everything is coated in the creamy sauce."
+          },
+          {
+            "step": "05",
+            "title": "Serve",
+            "description": "Garnish with fresh parsley and a sprinkle of chili flakes, then serve hot."
+          }
+        ],
+        "relatedRecipes": [
+          {
+            "id": "rel-1",
+            "title": "Garlic Butter Spaghetti with Herbs",
+            "category": "PASTA",
+            "readTime": "5 Min Read",
+            "image": "/faq-pasta.jpg",
+            "href": "/blog/creamy-mushroom-pasta-cozy-dinner"
+          },
+          {
+            "id": "rel-2",
+            "title": "Mediterranean Quinoa Bowl",
+            "category": "SALADS",
+            "readTime": "4 Min Read",
+            "image": "/blog-salad.jpg",
+            "href": "/blog/power-packed-quinoa-salad-fresh-greens"
+          },
+          {
+            "id": "rel-3",
+            "title": "Avocado Toast with Poached Egg",
+            "category": "BREAKFAST",
+            "readTime": "6 Min Read",
+            "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=600&q=80",
+            "href": "/blog/fluffy-banana-oat-pancakes-healthy-start"
+          },
+          {
+            "id": "rel-4",
+            "title": "Classic Chocolate Brownies",
+            "category": "DESSERTS",
+            "readTime": "5 Min Read",
+            "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80",
+            "href": "/blog/soft-chewy-chocolate-chip-cookies"
+          }
+        ],
+        "tags": ["Pasta", "Dinner", "Comfort Food", "Quick Meals"]
+      },
+      {
+        "id": "blog-2",
+        "slug": "power-packed-quinoa-salad-fresh-greens",
+        "category": "HEALTHY EATING",
+        "title": "Power-Packed Quinoa Salad with Fresh Greens",
+        "excerpt": "A nutritious and delicious salad loaded with fresh vegetables, protein-rich quinoa and a simple lemon dressing.",
+        "date": "June 05, 2025",
+        "readTime": "4 Min Read",
+        "image": "/blog-salad.jpg",
+        "author": "Elena Rostova",
+        "intro": "Fueling your body with vibrant, colorful whole foods doesn't mean compromising on texture or rich, satisfying flavor. This power-packed salad combines fluffy white quinoa cooked in aromatic vegetable broth, crisp diced Persian cucumbers, cherry tomatoes, and warm cumin-spiced chickpeas.",
+        "ingredients": [
+          "1 cup cooked white quinoa",
+          "1 cup spiced chickpeas, roasted",
+          "1 ripe avocado, sliced",
+          "½ cup cherry tomatoes, halved",
+          "1 Persian cucumber, sliced",
+          "2 cups baby arugula & spinach",
+          "2 tbsp cold-pressed olive oil",
+          "1 tbsp freshly squeezed lemon juice",
+          "1 tsp Dijon mustard",
+          "Sea salt and freshly ground pepper"
+        ],
+        "instructions": [
+          {
+            "step": "01",
+            "title": "Rinse & Cook Quinoa",
+            "description": "Simmer quinoa in vegetable stock for 15 minutes until tender and fluffy. Fluff with a fork and cool."
+          },
+          {
+            "step": "02",
+            "title": "Roast Chickpeas",
+            "description": "Toss cooked chickpeas with olive oil, cumin, smoked paprika, and salt. Roast at 200°C for 20 minutes until crisp."
+          },
+          {
+            "step": "03",
+            "title": "Whisk Vinaigrette",
+            "description": "In a small glass jar, vigorously shake lemon juice, olive oil, mustard, minced shallot, and sea salt."
+          },
+          {
+            "step": "04",
+            "title": "Assemble Bowl",
+            "description": "Arrange fresh greens, cooled quinoa, roasted chickpeas, cucumber ribbons, and avocado slices."
+          },
+          {
+            "step": "05",
+            "title": "Dress & Enjoy",
+            "description": "Drizzle generously with the citrus vinaigrette, garnish with fresh herbs, and serve chilled."
+          }
+        ],
+        "relatedRecipes": [
+          {
+            "id": "rel-1",
+            "title": "Garlic Butter Spaghetti with Herbs",
+            "category": "PASTA",
+            "readTime": "5 Min Read",
+            "image": "/faq-pasta.jpg",
+            "href": "/blog/creamy-mushroom-pasta-cozy-dinner"
+          },
+          {
+            "id": "rel-2",
+            "title": "Mediterranean Quinoa Bowl",
+            "category": "SALADS",
+            "readTime": "4 Min Read",
+            "image": "/blog-salad.jpg",
+            "href": "/blog/power-packed-quinoa-salad-fresh-greens"
+          },
+          {
+            "id": "rel-3",
+            "title": "Avocado Toast with Poached Egg",
+            "category": "BREAKFAST",
+            "readTime": "6 Min Read",
+            "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=600&q=80",
+            "href": "/blog/fluffy-banana-oat-pancakes-healthy-start"
+          },
+          {
+            "id": "rel-4",
+            "title": "Classic Chocolate Brownies",
+            "category": "DESSERTS",
+            "readTime": "5 Min Read",
+            "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80",
+            "href": "/blog/soft-chewy-chocolate-chip-cookies"
+          }
+        ],
+        "tags": ["Healthy", "Salad", "Plant-Based", "Gluten-Free"]
+      },
+      {
+        "id": "blog-3",
+        "slug": "fluffy-banana-oat-pancakes-healthy-start",
+        "category": "BREAKFAST",
+        "title": "Fluffy Banana Oat Pancakes for a Healthy Start",
+        "excerpt": "These easy banana oat pancakes are soft, naturally sweetened and perfect for a wholesome breakfast.",
+        "date": "May 28, 2025",
+        "readTime": "6 Min Read",
+        "image": "/blog-pancakes.jpg",
+        "author": "Elena Rostova",
+        "intro": "Weekend mornings are made for slow coffee and warm stacks of tender, golden pancakes straight from the skillet. Made entirely in a blender using rolled oats, ripe speckled bananas, cinnamon, and farm-fresh eggs, these pancakes are naturally gluten-free.",
+        "ingredients": [
+          "2 ripe bananas, mashed",
+          "1½ cups old fashioned rolled oats",
+          "2 large organic eggs",
+          "½ cup almond milk or oat milk",
+          "1 tsp ground cinnamon",
+          "1 tsp pure vanilla extract",
+          "1 tsp baking powder",
+          "Fresh blueberries for topping",
+          "Pure maple syrup for drizzling",
+          "Butter or coconut oil for skillet"
+        ],
+        "instructions": [
+          {
+            "step": "01",
+            "title": "Blend Ingredients",
+            "description": "Combine bananas, oats, eggs, milk, cinnamon, vanilla, and baking powder in a high-speed blender until silky smooth."
+          },
+          {
+            "step": "02",
+            "title": "Rest the Batter",
+            "description": "Allow batter to rest for 5 minutes so the ground oats absorb the liquid, creating a velvety, fluffy consistency."
+          },
+          {
+            "step": "03",
+            "title": "Heat Skillet",
+            "description": "Warm a cast iron griddle or non-stick skillet over medium-low heat and melt a dab of butter."
+          },
+          {
+            "step": "04",
+            "title": "Cook Until Bubbles Form",
+            "description": "Pour ¼ cup batter for each pancake. Cook 2-3 minutes until bubbles surface, flip gently and cook 2 minutes more."
+          },
+          {
+            "step": "05",
+            "title": "Garnish & Serve",
+            "description": "Stack high, crown with fresh blueberries and sliced bananas, then pour warm maple syrup generously."
+          }
+        ],
+        "relatedRecipes": [
+          {
+            "id": "rel-1",
+            "title": "Garlic Butter Spaghetti with Herbs",
+            "category": "PASTA",
+            "readTime": "5 Min Read",
+            "image": "/faq-pasta.jpg",
+            "href": "/blog/creamy-mushroom-pasta-cozy-dinner"
+          },
+          {
+            "id": "rel-2",
+            "title": "Mediterranean Quinoa Bowl",
+            "category": "SALADS",
+            "readTime": "4 Min Read",
+            "image": "/blog-salad.jpg",
+            "href": "/blog/power-packed-quinoa-salad-fresh-greens"
+          },
+          {
+            "id": "rel-3",
+            "title": "Avocado Toast with Poached Egg",
+            "category": "BREAKFAST",
+            "readTime": "6 Min Read",
+            "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=600&q=80",
+            "href": "/blog/fluffy-banana-oat-pancakes-healthy-start"
+          },
+          {
+            "id": "rel-4",
+            "title": "Classic Chocolate Brownies",
+            "category": "DESSERTS",
+            "readTime": "5 Min Read",
+            "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80",
+            "href": "/blog/soft-chewy-chocolate-chip-cookies"
+          }
+        ],
+        "tags": ["Breakfast", "Pancakes", "Healthy Mornings", "Gluten-Free"]
+      },
+      {
+        "id": "blog-4",
+        "slug": "soft-chewy-chocolate-chip-cookies",
+        "category": "DESSERTS",
+        "title": "Soft & Chewy Chocolate Chip Cookies",
+        "excerpt": "Classic cookies with a soft center and crispy edges – a simple recipe that never fails to delight.",
+        "date": "May 20, 2025",
+        "readTime": "5 Min Read",
+        "image": "/blog-cookies.jpg",
+        "author": "Elena Rostova",
+        "intro": "Achieving the holy grail of cookies—golden crisp edges surrounding a molten, chewy, chocolate-packed center—is pure culinary alchemy. We brown the butter to unlock toasted nutty notes, blend dark muscovado sugar with cane sugar, and fold in generous hand-chopped 70% dark chocolate chunks.",
+        "ingredients": [
+          "1 cup unsalted butter, browned & cooled",
+          "¾ cup dark brown sugar",
+          "½ cup granulated sugar",
+          "2 large room-temperature eggs",
+          "2 tsp pure Madagascar vanilla extract",
+          "2¼ cups unbleached all-purpose flour",
+          "1 tsp baking soda",
+          "¾ tsp fine sea salt",
+          "200g bittersweet dark chocolate (70%), roughly chopped",
+          "Flaky Maldon sea salt for sprinkling"
+        ],
+        "instructions": [
+          {
+            "step": "01",
+            "title": "Brown the Butter",
+            "description": "Melt butter in a saucepan over medium heat, swirling until golden brown flecks appear with a nutty aroma. Cool 10 minutes."
+          },
+          {
+            "step": "02",
+            "title": "Whisk Sugars & Eggs",
+            "description": "Whisk browned butter with brown and white sugars for 2 minutes. Whisk in eggs and vanilla until glossy and pale."
+          },
+          {
+            "step": "03",
+            "title": "Fold Dry Ingredients",
+            "description": "Gently fold in flour, baking soda, and salt with a rubber spatula. Fold in chopped dark chocolate pools."
+          },
+          {
+            "step": "04",
+            "title": "Chill & Bake",
+            "description": "Scoop large cookie dough balls onto parchment. Bake at 180°C (350°F) for 10-11 minutes until edges are set."
+          },
+          {
+            "step": "05",
+            "title": "Salt & Cool",
+            "description": "Immediately sprinkle flaky sea salt over hot cookies. Let rest on baking sheet 5 minutes, then transfer to cooling rack."
+          }
+        ],
+        "relatedRecipes": [
+          {
+            "id": "rel-1",
+            "title": "Garlic Butter Spaghetti with Herbs",
+            "category": "PASTA",
+            "readTime": "5 Min Read",
+            "image": "/faq-pasta.jpg",
+            "href": "/blog/creamy-mushroom-pasta-cozy-dinner"
+          },
+          {
+            "id": "rel-2",
+            "title": "Mediterranean Quinoa Bowl",
+            "category": "SALADS",
+            "readTime": "4 Min Read",
+            "image": "/blog-salad.jpg",
+            "href": "/blog/power-packed-quinoa-salad-fresh-greens"
+          },
+          {
+            "id": "rel-3",
+            "title": "Avocado Toast with Poached Egg",
+            "category": "BREAKFAST",
+            "readTime": "6 Min Read",
+            "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=600&q=80",
+            "href": "/blog/fluffy-banana-oat-pancakes-healthy-start"
+          },
+          {
+            "id": "rel-4",
+            "title": "Classic Chocolate Brownies",
+            "category": "DESSERTS",
+            "readTime": "5 Min Read",
+            "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80",
+            "href": "/blog/soft-chewy-chocolate-chip-cookies"
+          }
+        ],
+        "tags": ["Dessert", "Baking", "Cookies", "Chocolate"]
+      },
+      {
+        "id": "blog-5",
+        "slug": "roasted-tomato-basil-soup-crispy-croutons",
+        "category": "SOUPS",
+        "title": "Roasted Tomato & Basil Soup with Garlic Croutons",
+        "excerpt": "Slow-roasted Roma tomatoes and fragrant sweet basil blended into a velvety, warming soup paired with golden sourdough croutons.",
+        "date": "June 24, 2025",
+        "readTime": "6 Min Read",
+        "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=1000&q=80",
+        "author": "Elena Rostova",
+        "intro": "A bowl of homemade roasted tomato soup is like a warm hug on a breezy evening. By slow-roasting fresh tomatoes with garlic, thyme, and olive oil, their natural sugars caramelize, giving the broth unmatched depth and sweetness.",
+        "ingredients": [
+          "1 kg ripe Roma tomatoes, halved",
+          "1 large yellow onion, quartered",
+          "6 cloves fresh garlic, peeled",
+          "3 tbsp extra virgin olive oil",
+          "1 cup vegetable broth",
+          "½ cup heavy cream or coconut milk",
+          "1 cup fresh basil leaves",
+          "1 tbsp balsamic glaze",
+          "Salt and cracked black pepper to taste",
+          "Crusty sourdough bread for croutons"
+        ],
+        "instructions": [
+          {
+            "step": "01",
+            "title": "Roast the Vegetables",
+            "description": "Preheat oven to 200°C (400°F). Spread tomatoes, onion, and garlic cloves onto a lined baking sheet. Drizzle with olive oil, salt, and pepper, roasting for 35 minutes until lightly charred."
+          },
+          {
+            "step": "02",
+            "title": "Simmer & Blend",
+            "description": "Transfer roasted vegetables into a pot with vegetable broth and fresh basil. Bring to a simmer, then blend using an immersion blender until completely silky and smooth."
+          },
+          {
+            "step": "03",
+            "title": "Finish & Serve",
+            "description": "Stir in heavy cream and balsamic glaze. Season to taste and ladle into warm bowls. Top with extra virgin olive oil and homemade garlic croutons."
+          }
+        ],
+        "relatedRecipes": [
+          {
+            "id": "rel-5",
+            "title": "Creamy Mushroom Pasta for a Cozy Dinner",
+            "category": "RECIPES",
+            "readTime": "5 Min Read",
+            "image": "/blog-pasta.jpg",
+            "href": "/blog/creamy-mushroom-pasta-cozy-dinner"
+          },
+          {
+            "id": "rel-6",
+            "title": "Power-Packed Quinoa Salad with Fresh Greens",
+            "category": "SALADS",
+            "readTime": "4 Min Read",
+            "image": "/blog-salad.jpg",
+            "href": "/blog/power-packed-quinoa-salad-fresh-greens"
+          }
+        ],
+        "tags": ["Soup", "Vegetarian", "Comfort Food", "Tomato"]
+      },
+      {
+        "id": "blog-6",
+        "slug": "artisanal-rosemary-sea-salt-focaccia",
+        "category": "BAKING",
+        "title": "Golden Rosemary & Sea Salt Artisanal Focaccia",
+        "excerpt": "An airy, golden-crusted Italian flatbread infused with fragrant rosemary sprigs, extra-virgin olive oil, and flaky Maldon sea salt.",
+        "date": "July 02, 2025",
+        "readTime": "7 Min Read",
+        "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1000&q=80",
+        "author": "Elena Rostova",
+        "intro": "Nothing compares to the aroma of freshly baked focaccia filling your kitchen. With its crisp golden crust, tender pillowy interior, and pockets of rich olive oil and rosemary, this traditional bread is surprisingly effortless to master.",
+        "ingredients": [
+          "500g strong bread flour",
+          "7g instant dry yeast",
+          "400ml lukewarm water",
+          "1 tsp honey or raw sugar",
+          "10g fine sea salt",
+          "¼ cup high-quality extra virgin olive oil",
+          "3 sprigs fresh rosemary, leaves picked",
+          "Flaky Maldon sea salt for topping"
+        ],
+        "instructions": [
+          {
+            "step": "01",
+            "title": "Mix & First Rise",
+            "description": "Combine flour, yeast, water, honey, and salt in a bowl to form a sticky dough. Perform stretch-and-folds every 30 minutes for 2 hours until silky and bubbly."
+          },
+          {
+            "step": "02",
+            "title": "Dimple & Proof",
+            "description": "Pour generous olive oil into a baking pan, transfer dough, and proof for 1 hour. Generously dimple the dough with your fingertips and press in fresh rosemary sprigs."
+          },
+          {
+            "step": "03",
+            "title": "Bake to Golden Perfection",
+            "description": "Bake at 220°C (425°F) for 22–25 minutes until deeply golden brown and crisp. Sprinkle immediately with flaky sea salt and allow to rest before slicing."
+          }
+        ],
+        "relatedRecipes": [
+          {
+            "id": "rel-7",
+            "title": "Chewy Brown Butter Chocolate Chip Cookies",
+            "category": "DESSERTS",
+            "readTime": "4 Min Read",
+            "image": "/blog-cookies.jpg",
+            "href": "/blog/chewy-brown-butter-chocolate-chip-cookies"
+          },
+          {
+            "id": "rel-8",
+            "title": "Creamy Mushroom Pasta for a Cozy Dinner",
+            "category": "RECIPES",
+            "readTime": "5 Min Read",
+            "image": "/blog-pasta.jpg",
+            "href": "/blog/creamy-mushroom-pasta-cozy-dinner"
+          }
+        ],
+        "tags": ["Bread", "Baking", "Italian", "Focaccia"]
+      },
+      {
+        "id": "blog-7",
+        "slug": "crispy-pan-seared-salmon-citrus-glaze",
+        "category": "MAIN COURSE",
+        "title": "Crispy Pan-Seared Salmon with Citrus Glaze",
+        "excerpt": "Tender wild salmon fillets with an ultra-crispy skin, glazed with honey orange reduction and served alongside tender asparagus.",
+        "date": "July 14, 2025",
+        "readTime": "5 Min Read",
+        "image": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=1000&q=80",
+        "author": "Elena Rostova",
+        "intro": "Pan-searing salmon is an essential kitchen technique that yields succulent, flaky fish with a restaurant-worthy crackling crisp skin. Paired with a delicate citrus honey glaze, it creates an unforgettable dinner in under twenty minutes.",
+        "ingredients": [
+          "2 fresh salmon fillets with skin on",
+          "1 tbsp olive oil",
+          "2 tbsp unsalted butter",
+          "Juice and zest of 1 fresh orange",
+          "1 tbsp raw honey",
+          "1 clove garlic, finely grated",
+          "1 bunch fresh tender asparagus",
+          "Flaky sea salt and cracked pepper"
+        ],
+        "instructions": [
+          {
+            "step": "01",
+            "title": "Prep the Salmon",
+            "description": "Pat the salmon fillets thoroughly dry with paper towels to ensure a crispy skin. Season generously with sea salt and black pepper."
+          },
+          {
+            "step": "02",
+            "title": "Sear the Skin",
+            "description": "Heat olive oil in a heavy stainless steel or cast iron skillet over medium-high heat. Place salmon skin-side down and press gently for 10 seconds. Cook undisturbed for 5 minutes."
+          },
+          {
+            "step": "03",
+            "title": "Glaze & Baste",
+            "description": "Flip fillets carefully, add butter, orange juice, honey, and garlic. Baste the salmon with the foaming glaze for 2 minutes until cooked to medium tenderness."
+          }
+        ],
+        "relatedRecipes": [
+          {
+            "id": "rel-9",
+            "title": "Power-Packed Quinoa Salad with Fresh Greens",
+            "category": "SALADS",
+            "readTime": "4 Min Read",
+            "image": "/blog-salad.jpg",
+            "href": "/blog/power-packed-quinoa-salad-fresh-greens"
+          },
+          {
+            "id": "rel-10",
+            "title": "Creamy Mushroom Pasta for a Cozy Dinner",
+            "category": "RECIPES",
+            "readTime": "5 Min Read",
+            "image": "/blog-pasta.jpg",
+            "href": "/blog/creamy-mushroom-pasta-cozy-dinner"
+          }
+        ],
+        "tags": ["Seafood", "Salmon", "Healthy", "Quick Meals"]
+      },
+      {
+        "id": "blog-8",
+        "slug": "decadent-espresso-tiramisu-mascarpone",
+        "category": "DESSERTS",
+        "title": "Decadent Classic Italian Espresso Tiramisu",
+        "excerpt": "Layers of delicate espresso-soaked ladyfingers and velvety mascarpone cream, finished with a generous dusting of Dutch cocoa.",
+        "date": "July 28, 2025",
+        "readTime": "6 Min Read",
+        "image": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=1000&q=80",
+        "author": "Elena Rostova",
+        "intro": "Tiramisu is an Italian masterpiece that strikes the perfect harmony between robust espresso, subtle sweetness, and cloud-like creamy textures. Making it from scratch with authentic mascarpone is a reward in itself.",
+        "ingredients": [
+          "500g Italian mascarpone cheese",
+          "4 large fresh egg yolks",
+          "½ cup granulated sugar",
+          "1 cup heavy whipping cream",
+          "1 cup freshly brewed strong espresso, cooled",
+          "2 tbsp Marsala wine or coffee liqueur",
+          "24 crisp savoiardi ladyfinger cookies",
+          "High-quality unsweetened cocoa powder"
+        ],
+        "instructions": [
+          {
+            "step": "01",
+            "title": "Whip the Cream",
+            "description": "Whisk egg yolks and sugar over a gentle water bath until pale and thick. Beat mascarpone into the mixture, then fold in softly whipped heavy cream until velvety."
+          },
+          {
+            "step": "02",
+            "title": "Dip and Layer",
+            "description": "Combine espresso and liqueur. Briefly dip each ladyfinger for one second per side and arrange in a single layer at the bottom of a serving dish. Spread half the mascarpone cream over top."
+          },
+          {
+            "step": "03",
+            "title": "Chill & Dust",
+            "description": "Repeat with a second layer of soaked ladyfingers and remaining cream. Chill in refrigerator for at least 6 hours, then dust generously with cocoa powder before slicing."
+          }
+        ],
+        "relatedRecipes": [
+          {
+            "id": "rel-11",
+            "title": "Fluffy Japanese Souffle Pancakes",
+            "category": "BREAKFAST",
+            "readTime": "5 Min Read",
+            "image": "/blog-pancakes.jpg",
+            "href": "/blog/fluffy-japanese-souffle-pancakes"
+          },
+          {
+            "id": "rel-12",
+            "title": "Chewy Brown Butter Chocolate Chip Cookies",
+            "category": "DESSERTS",
+            "readTime": "4 Min Read",
+            "image": "/blog-cookies.jpg",
+            "href": "/blog/chewy-brown-butter-chocolate-chip-cookies"
+          }
+        ],
+        "tags": ["Dessert", "Tiramisu", "Espresso", "Italian"]
+      }
+    ]
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Frequently Asked",
+    "titleHighlight": "Questions",
+    "subtitle": "Find quick answers to common questions about our recipes, cooking tips and blog.",
+    "image": "/faq-pasta.jpg",
+    "items": [
+      {
+        "id": "faq-1",
+        "number": "01",
+        "question": "What type of recipes do you share?",
+        "answer": "We share a variety of easy, delicious and practical recipes including breakfast ideas, lunch and dinner recipes, healthy meals, desserts and seasonal specials. Our focus is on simple ingredients and real, everyday cooking."
+      },
+      {
+        "id": "faq-2",
+        "number": "02",
+        "question": "Are your recipes suitable for beginners?",
+        "answer": "Yes, absolutely! Most of our recipes come with detailed step-by-step instructions, essential prep tips, and ingredient alternatives to help beginners cook with confidence."
+      },
+      {
+        "id": "faq-3",
+        "number": "03",
+        "question": "Do you include nutritional information?",
+        "answer": "Yes, our recipes include estimated nutritional facts including calorie count, protein, fats, and carbohydrates to help you make mindful dietary choices."
+      },
+      {
+        "id": "faq-4",
+        "number": "04",
+        "question": "Can I suggest a recipe?",
+        "answer": "We love hearing from our community! You can send us your recipe ideas or requests through our contact page or by tagging us on social media."
+      },
+      {
+        "id": "faq-5",
+        "number": "05",
+        "question": "How often do you post new recipes?",
+        "answer": "We publish new recipes 2 to 3 times every week, featuring seasonal produce, quick weeknight dinners, and special weekend treats."
+      },
+      {
+        "id": "faq-6",
+        "number": "06",
+        "question": "Do you have vegetarian or vegan options?",
+        "answer": "Yes, we feature dedicated vegetarian, vegan, and plant-forward recipes, along with easy substitution guides for most traditional dishes."
+      },
+      {
+        "id": "faq-7",
+        "number": "07",
+        "question": "Can I use your recipes for personal use?",
+        "answer": "Of course! All of our recipes are free for your personal home cooking. If you share your creations online, we'd appreciate a mention or tag."
+      },
+      {
+        "id": "faq-8",
+        "number": "08",
+        "question": "How can I stay updated with new posts?",
+        "answer": "Subscribe to our weekly culinary newsletter or follow our Instagram @blobyte to get instant alerts whenever a fresh recipe is released."
+      }
+    ]
+  },
+  "contact": {
+    "kicker": "CONTACT US",
+    "title": "Let's Talk",
+    "titleHighlight": "Good Food",
+    "subtitle": "Have a question, suggestion or just want to say hello? We'd love to hear from you. Drop us a message and we'll get back to you soon.",
+    "infoItems": [
+      {
+        "icon": "mail",
+        "label": "EMAIL US",
+        "value": "info@xyz.com",
+        "href": "mailto:info@xyz.com"
+      },
+      {
+        "icon": "location",
+        "label": "OUR LOCATION",
+        "value": "Claudine Trumbull,521 Glendale Cir, Springfield, PA 19064,United States"
+      },
+      {
+        "icon": "clock",
+        "label": "RESPONSE TIME",
+        "value": "Within 24–48 hours"
+      }
+    ],
+    "formTitle": "Send Us a Message"
+  },
+  "footer": {
+    "bannerImage": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1600&q=80",
+    "footerBgImage": "/footer-bgs.webp",
+    "logo": {
+      "brandName": "BLOBYTE",
+      "image": "/logo.png",
+      "subtext": "FOOD STORIES | RECIPES | REVIEWS"
+    },
+    "navigation": [
+      { "label": "Home", "href": "/" },
+      { "label": "About Us", "href": "/about" },
+      { "label": "Blog", "href": "/blog" },
+      { "label": "Faqs", "href": "/faq" },
+      { "label": "Contact Us", "href": "/contact" }
+    ],
+    "socials": [
+      { "platform": "facebook", "url": "https://facebook.com", "ariaLabel": "Facebook" },
+      { "platform": "instagram", "url": "https://instagram.com", "ariaLabel": "Instagram" },
+      { "platform": "youtube", "url": "https://youtube.com", "ariaLabel": "YouTube" },
+      { "platform": "pinterest", "url": "https://pinterest.com", "ariaLabel": "Pinterest" },
+      { "platform": "twitter", "url": "https://twitter.com", "ariaLabel": "Twitter / X" }
+    ],
+    "copyright": "© 2026 All Rights Reserved. Powered by Lestow"
+  }
+}
