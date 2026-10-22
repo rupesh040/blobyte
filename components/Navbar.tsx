@@ -117,7 +117,15 @@ export const Navbar: React.FC<NavbarProps> = ({ data }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <div className="flex-shrink-0">
-            <Link href="/" className="inline-block select-none group">
+            <Link
+              href="/"
+              onClick={() => {
+                if (pathname === "/") {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+              }}
+              className="inline-block select-none group"
+            >
               <motion.div
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
@@ -159,6 +167,9 @@ export const Navbar: React.FC<NavbarProps> = ({ data }) => {
                         width: el.offsetWidth,
                         opacity: 1,
                       });
+                    }
+                    if (isItemActive(item.href)) {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }
                   }}
                   className={`relative font-sans text-xs uppercase tracking-[0.2em] font-medium transition-colors pb-1.5 ${
@@ -242,6 +253,9 @@ export const Navbar: React.FC<NavbarProps> = ({ data }) => {
                     href={item.href}
                     onClick={() => {
                       setMobileMenuOpen(false);
+                      if (isItemActive(item.href)) {
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }
                     }}
                     className={`text-sm font-sans tracking-[0.18em] uppercase py-2 px-3 rounded-md transition-colors ${
                       isItemActive(item.href)

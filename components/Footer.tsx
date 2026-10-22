@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { ArrowUp } from "lucide-react";
 import { motion } from "framer-motion";
 import { SocialIcon } from "@/components/SocialIcons";
@@ -13,6 +14,7 @@ interface FooterProps {
 }
 
 export const Footer: React.FC<FooterProps> = ({ data }) => {
+  const pathname = usePathname();
   const {
     footerBgImage = "/footer-bgs.webp",
     logo,
@@ -60,7 +62,15 @@ export const Footer: React.FC<FooterProps> = ({ data }) => {
           className="flex flex-col lg:flex-row items-center justify-between gap-6 pb-6 border-b border-black"
         >
           <div className="flex-shrink-0 text-center lg:text-left">
-            <Link href="/" className="inline-block select-none group">
+            <Link
+              href="/"
+              onClick={() => {
+                if (pathname === "/") {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+              }}
+              className="inline-block select-none group"
+            >
               <motion.div
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
@@ -90,6 +100,11 @@ export const Footer: React.FC<FooterProps> = ({ data }) => {
               >
                 <Link
                   href={item.href}
+                  onClick={() => {
+                    if (pathname === item.href) {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }
+                  }}
                   className="font-sans text-xs uppercase tracking-[0.2em] font-medium text-neutral-700 hover:text-neutral-950 transition-colors relative py-1 group inline-block"
                 >
                   {item.label}
