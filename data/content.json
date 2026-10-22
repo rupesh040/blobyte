@@ -25,6 +25,16 @@
         "ariaLabel": "Facebook"
       },
       {
+        "platform": "instagram",
+        "url": "https://instagram.com",
+        "ariaLabel": "Instagram"
+      },
+      {
+        "platform": "youtube",
+        "url": "https://youtube.com",
+        "ariaLabel": "YouTube"
+      },
+      {
         "platform": "pinterest",
         "url": "https://pinterest.com",
         "ariaLabel": "Pinterest"
@@ -33,11 +43,6 @@
         "platform": "twitter",
         "url": "https://twitter.com",
         "ariaLabel": "Twitter / X"
-      },
-      {
-        "platform": "linkedin",
-        "url": "https://linkedin.com",
-        "ariaLabel": "LinkedIn"
       }
     ]
   },
