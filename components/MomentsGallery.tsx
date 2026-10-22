@@ -37,9 +37,14 @@ const itemVariants: Variants = {
   },
 };
 
-export const MomentsGallery: React.FC<MomentsGalleryProps> = ({ data, className = "" }) => {
+export const MomentsGallery: React.FC<MomentsGalleryProps> = ({
+  data,
+  className = "",
+}) => {
   const { title, titleHighlight, subtitle, items } = data;
-  const [activeMoment, setActiveMoment] = useState<(typeof items)[0] | null>(null);
+  const [activeMoment, setActiveMoment] = useState<(typeof items)[0] | null>(
+    null,
+  );
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -60,7 +65,9 @@ export const MomentsGallery: React.FC<MomentsGalleryProps> = ({ data, className 
   }, [activeMoment]);
 
   return (
-    <section className={`py-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>
+    <section
+      className={`py-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}
+    >
       <motion.div
         initial={{ opacity: 0, y: 25 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -127,7 +134,10 @@ export const MomentsGallery: React.FC<MomentsGalleryProps> = ({ data, className 
                 initial={false}
                 className="mb-2 transform -translate-y-2 group-hover:translate-y-0 transition-transform duration-300"
               >
-                <SocialIcon platform="instagram" className="w-5 h-5 text-white" />
+                <SocialIcon
+                  platform="instagram"
+                  className="w-5 h-5 text-white"
+                />
               </motion.div>
               <div className="flex items-center gap-1.5 text-xs font-sans font-medium">
                 <Heart className="w-3.5 h-3.5 fill-red-400 text-red-400 group-hover:animate-pulse" />
@@ -182,7 +192,9 @@ export const MomentsGallery: React.FC<MomentsGalleryProps> = ({ data, className 
                   </p>
                   <div className="flex items-center gap-2 text-xs font-sans text-neutral-500">
                     <Heart className="w-3.5 h-3.5 fill-red-400 text-red-400" />
-                    <span>{activeMoment.likes.toLocaleString()} likes on Instagram</span>
+                    <span>
+                      {activeMoment.likes.toLocaleString()} likes on Instagram
+                    </span>
                   </div>
                 </div>
 

@@ -12,7 +12,10 @@ interface FaqProps {
   className?: string;
 }
 
-export const Faq: React.FC<FaqProps> = ({ data = defaultFaqData, className = "" }) => {
+export const Faq: React.FC<FaqProps> = ({
+  data = defaultFaqData,
+  className = "",
+}) => {
   const { badge, title, titleHighlight, subtitle, image, items } = data;
   const [openId, setOpenId] = useState<string | null>(items[0]?.id || "faq-1");
 
@@ -205,7 +208,8 @@ export const Faq: React.FC<FaqProps> = ({ data = defaultFaqData, className = "" 
                   Have a question not listed here?
                 </h4>
                 <p className="text-xs sm:text-sm text-neutral-600 font-sans">
-                  We are here to help your home cooking journey every step of the way.
+                  We are here to help your home cooking journey every step of
+                  the way.
                 </p>
               </div>
             </div>

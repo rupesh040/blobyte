@@ -28,7 +28,8 @@ const cardItemVariants: Variants = {
 export const Recipes: React.FC<RecipesProps> = ({ data, onSelectRecipe }) => {
   const { kicker, title, titleAccent, subtitle, categories, items } = data;
 
-  const [selectedCategory, setSelectedCategory] = useState<RecipeCategory>("ALL");
+  const [selectedCategory, setSelectedCategory] =
+    useState<RecipeCategory>("ALL");
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredRecipes = useMemo(() => {
@@ -40,15 +41,17 @@ export const Recipes: React.FC<RecipesProps> = ({ data, onSelectRecipe }) => {
         recipe.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         recipe.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         recipe.ingredients?.some((ing) =>
-          ing.item.toLowerCase().includes(searchQuery.toLowerCase())
+          ing.item.toLowerCase().includes(searchQuery.toLowerCase()),
         );
       return matchesCategory && matchesSearch;
     });
   }, [items, selectedCategory, searchQuery]);
 
-
   return (
-    <section id="recipes" className="py-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      id="recipes"
+      className="py-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+    >
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -105,7 +108,9 @@ export const Recipes: React.FC<RecipesProps> = ({ data, onSelectRecipe }) => {
               key={cat}
               onClick={() => setSelectedCategory(cat)}
               className={`relative text-[11px] font-sans font-medium uppercase tracking-[0.18em] px-3.5 py-1.5 whitespace-nowrap transition-colors rounded-xs cursor-pointer ${
-                isActive ? "text-white" : "text-neutral-600 hover:text-neutral-950 hover:bg-neutral-200/50"
+                isActive
+                  ? "text-white"
+                  : "text-neutral-600 hover:text-neutral-950 hover:bg-neutral-200/50"
               }`}
             >
               {isActive && (
@@ -180,7 +185,9 @@ export const Recipes: React.FC<RecipesProps> = ({ data, onSelectRecipe }) => {
         </motion.div>
       ) : (
         <div className="text-center py-16 bg-white/50 border border-dashed border-neutral-300 rounded-sm">
-          <p className="font-editorial text-2xl text-neutral-700 mb-2">No recipes found</p>
+          <p className="font-editorial text-2xl text-neutral-700 mb-2">
+            No recipes found
+          </p>
           <button
             onClick={() => {
               setSelectedCategory("ALL");

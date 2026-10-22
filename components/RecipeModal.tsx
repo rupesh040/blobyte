@@ -2,7 +2,16 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { X, Clock, Users, Flame, Star, Check, Share2, Printer } from "lucide-react";
+import {
+  X,
+  Clock,
+  Users,
+  Flame,
+  Star,
+  Check,
+  Share2,
+  Printer,
+} from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Recipe } from "@/types/type";
 
@@ -11,8 +20,13 @@ interface RecipeModalProps {
   onClose: () => void;
 }
 
-export const RecipeModal: React.FC<RecipeModalProps> = ({ recipe, onClose }) => {
-  const [checkedIngredients, setCheckedIngredients] = useState<Record<number, boolean>>({});
+export const RecipeModal: React.FC<RecipeModalProps> = ({
+  recipe,
+  onClose,
+}) => {
+  const [checkedIngredients, setCheckedIngredients] = useState<
+    Record<number, boolean>
+  >({});
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
@@ -130,7 +144,9 @@ export const RecipeModal: React.FC<RecipeModalProps> = ({ recipe, onClose }) => 
 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 py-4 border-y border-neutral-100 text-center font-sans">
                 <div className="p-2.5 bg-neutral-50 rounded-xs">
-                  <span className="text-[10px] uppercase text-neutral-400 font-medium block">Time</span>
+                  <span className="text-[10px] uppercase text-neutral-400 font-medium block">
+                    Time
+                  </span>
                   <div className="flex items-center justify-center gap-1 text-xs font-semibold text-neutral-800 mt-1">
                     <Clock className="w-3.5 h-3.5 text-neutral-500" />
                     <span>{recipe.cookingTime}</span>
@@ -138,7 +154,9 @@ export const RecipeModal: React.FC<RecipeModalProps> = ({ recipe, onClose }) => 
                 </div>
 
                 <div className="p-2.5 bg-neutral-50 rounded-xs">
-                  <span className="text-[10px] uppercase text-neutral-400 font-medium block">Servings</span>
+                  <span className="text-[10px] uppercase text-neutral-400 font-medium block">
+                    Servings
+                  </span>
                   <div className="flex items-center justify-center gap-1 text-xs font-semibold text-neutral-800 mt-1">
                     <Users className="w-3.5 h-3.5 text-neutral-500" />
                     <span>{recipe.servings}</span>
@@ -146,7 +164,9 @@ export const RecipeModal: React.FC<RecipeModalProps> = ({ recipe, onClose }) => 
                 </div>
 
                 <div className="p-2.5 bg-neutral-50 rounded-xs">
-                  <span className="text-[10px] uppercase text-neutral-400 font-medium block">Calories</span>
+                  <span className="text-[10px] uppercase text-neutral-400 font-medium block">
+                    Calories
+                  </span>
                   <div className="flex items-center justify-center gap-1 text-xs font-semibold text-neutral-800 mt-1">
                     <Flame className="w-3.5 h-3.5 text-amber-600" />
                     <span>{recipe.calories || "350 kcal"}</span>
@@ -154,7 +174,9 @@ export const RecipeModal: React.FC<RecipeModalProps> = ({ recipe, onClose }) => 
                 </div>
 
                 <div className="p-2.5 bg-neutral-50 rounded-xs">
-                  <span className="text-[10px] uppercase text-neutral-400 font-medium block">Rating</span>
+                  <span className="text-[10px] uppercase text-neutral-400 font-medium block">
+                    Rating
+                  </span>
                   <div className="flex items-center justify-center gap-1 text-xs font-semibold text-neutral-800 mt-1">
                     <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
                     <span>{recipe.rating || 4.9} / 5.0</span>
@@ -164,8 +186,12 @@ export const RecipeModal: React.FC<RecipeModalProps> = ({ recipe, onClose }) => 
 
               {recipe.ingredients && recipe.ingredients.length > 0 && (
                 <div>
-                  <h3 className="font-editorial text-2xl text-neutral-900 mb-3">Ingredients</h3>
-                  <p className="text-xs text-neutral-400 font-sans mb-3">Tap items to mark as prepared:</p>
+                  <h3 className="font-editorial text-2xl text-neutral-900 mb-3">
+                    Ingredients
+                  </h3>
+                  <p className="text-xs text-neutral-400 font-sans mb-3">
+                    Tap items to mark as prepared:
+                  </p>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 font-sans text-sm">
                     {recipe.ingredients.map((ing, idx) => {
                       const isChecked = !!checkedIngredients[idx];
@@ -199,7 +225,9 @@ export const RecipeModal: React.FC<RecipeModalProps> = ({ recipe, onClose }) => 
 
               {recipe.instructions && recipe.instructions.length > 0 && (
                 <div className="pt-2">
-                  <h3 className="font-editorial text-2xl text-neutral-900 mb-4">Step-by-Step Instructions</h3>
+                  <h3 className="font-editorial text-2xl text-neutral-900 mb-4">
+                    Step-by-Step Instructions
+                  </h3>
                   <ol className="space-y-4 font-sans text-sm text-neutral-700">
                     {recipe.instructions.map((step, idx) => (
                       <li key={idx} className="flex gap-4">

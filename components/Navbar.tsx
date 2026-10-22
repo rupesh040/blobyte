@@ -16,27 +16,91 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ data }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeItem, setActiveItem] = useState("Home");
   const pathname = usePathname();
 
   const { logo, navigation, socials } = data;
+
+  const navRef = React.useRef<HTMLElement>(null);
+  const linkRefs = React.useRef<{ [key: string]: HTMLAnchorElement | null }>({});
+  const [indicator, setIndicator] = useState<{
+    left: number;
+    width: number;
+    opacity: number;
+  }>({
+    left: 0,
+    width: 0,
+    opacity: 0,
+  });
+  const isFirstRender = React.useRef(true);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const isItemActive = (item: { href: string; label: string }) => {
-    if (item.href === "/" && pathname === "/") return true;
-    if (item.href === "/about" && pathname?.startsWith("/about")) return true;
-    if (item.href === "/blog" && pathname?.startsWith("/blog")) return true;
-    if (item.href === "/faq" && pathname?.startsWith("/faq")) return true;
-    if (item.href === "/contact" && pathname?.startsWith("/contact")) return true;
-    return activeItem === item.label;
+  const isItemActive = (href: string) => {
+    if (!pathname) return href === "/";
+    const current =
+      pathname.endsWith("/") && pathname.length > 1
+        ? pathname.slice(0, -1)
+        : pathname;
+    const target =
+      href.endsWith("/") && href.length > 1 ? href.slice(0, -1) : href;
+    if (target === "/") {
+      return current === "/";
+    }
+    return current === target || current.startsWith(target + "/");
   };
+
+  useEffect(() => {
+    const updateIndicator = () => {
+      const activeItem = navigation.find((item) => isItemActive(item.href));
+      if (!activeItem) {
+        setIndicator((prev) => ({ ...prev, opacity: 0 }));
+        return;
+      }
+      const el = linkRefs.current[activeItem.href];
+      if (el && navRef.current) {
+        setIndicator({
+          left: el.offsetLeft,
+          width: el.offsetWidth,
+          opacity: 1,
+        });
+      }
+    };
+
+    updateIndicator();
+
+    const frameId = requestAnimationFrame(updateIndicator);
+    const timer = setTimeout(updateIndicator, 50);
+
+    if (typeof document !== "undefined" && document.fonts?.ready) {
+      document.fonts.ready.then(updateIndicator);
+    }
+
+    window.addEventListener("resize", updateIndicator);
+
+    if (isFirstRender.current) {
+      const renderTimer = setTimeout(() => {
+        isFirstRender.current = false;
+      }, 80);
+      return () => {
+        cancelAnimationFrame(frameId);
+        clearTimeout(timer);
+        clearTimeout(renderTimer);
+        window.removeEventListener("resize", updateIndicator);
+      };
+    }
+
+    return () => {
+      cancelAnimationFrame(frameId);
+      clearTimeout(timer);
+      window.removeEventListener("resize", updateIndicator);
+    };
+  }, [pathname, navigation]);
 
   return (
     <motion.header
@@ -74,14 +138,29 @@ export const Navbar: React.FC<NavbarProps> = ({ data }) => {
             </Link>
           </div>
 
-          <nav className="hidden md:flex items-center space-x-8 lg:space-x-10">
+          <nav
+            ref={navRef}
+            className="relative hidden md:flex items-center space-x-8 lg:space-x-10"
+          >
             {navigation.map((item) => {
-              const isActive = isItemActive(item);
+              const isActive = isItemActive(item.href);
               return (
                 <Link
                   key={item.label}
+                  ref={(el) => {
+                    linkRefs.current[item.href] = el;
+                  }}
                   href={item.href}
-                  onClick={() => setActiveItem(item.label)}
+                  onClick={() => {
+                    const el = linkRefs.current[item.href];
+                    if (el) {
+                      setIndicator({
+                        left: el.offsetLeft,
+                        width: el.offsetWidth,
+                        opacity: 1,
+                      });
+                    }
+                  }}
                   className={`relative font-sans text-xs uppercase tracking-[0.2em] font-medium transition-colors pb-1.5 ${
                     isActive
                       ? "text-neutral-900 font-semibold"
@@ -89,16 +168,30 @@ export const Navbar: React.FC<NavbarProps> = ({ data }) => {
                   }`}
                 >
                   {item.label}
-                  {isActive && (
-                    <motion.span
-                      layoutId="activeNavIndicator"
-                      className="absolute bottom-0 left-0 w-full h-[2px] bg-neutral-900 rounded-full"
-                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                    />
-                  )}
                 </Link>
               );
             })}
+
+            {indicator.opacity > 0 && (
+              <motion.span
+                className="absolute bottom-0 h-[2px] bg-neutral-900 rounded-full pointer-events-none"
+                initial={false}
+                animate={{
+                  left: indicator.left,
+                  width: indicator.width,
+                  opacity: indicator.opacity,
+                }}
+                transition={
+                  isFirstRender.current
+                    ? { duration: 0 }
+                    : {
+                        type: "spring",
+                        stiffness: 380,
+                        damping: 30,
+                      }
+                }
+              />
+            )}
           </nav>
 
           <div className="hidden md:flex items-center space-x-2.5">
@@ -124,7 +217,11 @@ export const Navbar: React.FC<NavbarProps> = ({ data }) => {
               className="p-2 text-neutral-700 hover:text-neutral-950 hover:bg-neutral-100 rounded-md transition-colors"
               aria-label="Toggle navigation menu"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -144,11 +241,10 @@ export const Navbar: React.FC<NavbarProps> = ({ data }) => {
                     key={item.label}
                     href={item.href}
                     onClick={() => {
-                      setActiveItem(item.label);
                       setMobileMenuOpen(false);
                     }}
                     className={`text-sm font-sans tracking-[0.18em] uppercase py-2 px-3 rounded-md transition-colors ${
-                      isItemActive(item)
+                      isItemActive(item.href)
                         ? "bg-neutral-900 text-white font-semibold"
                         : "text-neutral-700 hover:bg-neutral-100"
                     }`}
@@ -167,7 +263,10 @@ export const Navbar: React.FC<NavbarProps> = ({ data }) => {
                       aria-label={social.ariaLabel}
                       className="w-8 h-8 rounded-full border border-neutral-300 bg-white flex items-center justify-center text-neutral-700 hover:bg-neutral-900 hover:text-white transition-colors"
                     >
-                      <SocialIcon platform={social.platform} className="w-4 h-4" />
+                      <SocialIcon
+                        platform={social.platform}
+                        className="w-4 h-4"
+                      />
                     </a>
                   ))}
                 </div>

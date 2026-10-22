@@ -36,7 +36,10 @@ export const FeaturedRecipe: React.FC<FeaturedRecipeProps> = ({
   };
 
   return (
-    <section id="featured" className="py-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section
+      id="featured"
+      className="py-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden"
+    >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         <motion.div
           initial={{ opacity: 0, x: -30 }}

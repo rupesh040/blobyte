@@ -13,14 +13,23 @@ interface FooterProps {
 }
 
 export const Footer: React.FC<FooterProps> = ({ data }) => {
-  const { footerBgImage = "/footer-bgs.webp", logo, navigation, socials, copyright } = data;
+  const {
+    footerBgImage = "/footer-bgs.webp",
+    logo,
+    navigation,
+    socials,
+    copyright,
+  } = data;
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <footer id="contact" className="relative mt-4  bg-[#F4EFEA] overflow-hidden flex flex-col justify-end">
+    <footer
+      id="contact"
+      className="relative mt-4  bg-[#F4EFEA] overflow-hidden flex flex-col justify-end"
+    >
       <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden">
         <motion.div
           initial={{ opacity: 0, scale: 1.04 }}

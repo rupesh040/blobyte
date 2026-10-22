@@ -46,7 +46,10 @@ export const Hero: React.FC<HeroProps> = ({ data }) => {
           >
             <div className="relative aspect-[4/5] w-full overflow-hidden bg-neutral-100">
               <Image
-                src={cards[0]?.image || "https://images.unsplash.com/photo-1509358271058-acd22cc93898?auto=format&fit=crop&w=800&q=80"}
+                src={
+                  cards[0]?.image ||
+                  "https://images.unsplash.com/photo-1509358271058-acd22cc93898?auto=format&fit=crop&w=800&q=80"
+                }
                 alt={cards[0]?.alt || "Wild Forest Mushrooms"}
                 fill
                 priority
@@ -77,7 +80,10 @@ export const Hero: React.FC<HeroProps> = ({ data }) => {
           >
             <div className="relative aspect-[4/4] sm:aspect-[4/3.8] w-full overflow-hidden bg-neutral-100">
               <Image
-                src={cards[1]?.image || "https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?auto=format&fit=crop&w=1000&q=80"}
+                src={
+                  cards[1]?.image ||
+                  "https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?auto=format&fit=crop&w=1000&q=80"
+                }
                 alt={cards[1]?.alt || "Artisan Risotto Bowl"}
                 fill
                 priority
@@ -108,7 +114,10 @@ export const Hero: React.FC<HeroProps> = ({ data }) => {
           >
             <div className="relative aspect-[3/4] w-full overflow-hidden bg-neutral-100">
               <Image
-                src={cards[2]?.image || "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80"}
+                src={
+                  cards[2]?.image ||
+                  "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80"
+                }
                 alt={cards[2]?.alt || "Artisanal Ribbon Pasta"}
                 fill
                 priority
