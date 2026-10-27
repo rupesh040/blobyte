@@ -3,7 +3,6 @@
 import React from "react";
 import { PageBanner } from "@/components/PageBanner";
 import { BlogSection } from "@/components/BlogSection";
-import { MomentsGallery } from "@/components/MomentsGallery";
 import { homePageData, blogData } from "@/data";
 
 export default function BlogPage() {
@@ -19,8 +18,6 @@ export default function BlogPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="border-t border-neutral-200/60" />
       </div>
-
-      <MomentsGallery data={homePageData.momentsGallery} />
     </div>
   );
 }

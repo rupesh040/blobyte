@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import { PageBanner } from "@/components/PageBanner";
 import { BlogDetail } from "@/components/BlogDetail";
 import { BlogDetailSkeleton } from "@/components/BlogDetailSkeleton";
-import { MomentsGallery } from "@/components/MomentsGallery";
 import { getBlogPostBySlug, blogPosts, homePageData } from "@/data";
 
 interface BlogDetailPageProps {
@@ -48,8 +47,6 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="border-t border-neutral-200/60" />
       </div>
-
-      <MomentsGallery data={homePageData.momentsGallery} />
     </div>
   );
 }

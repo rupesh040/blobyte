@@ -3,7 +3,6 @@
 import React from "react";
 import { PageBanner } from "@/components/PageBanner";
 import { Faq } from "@/components/Faq";
-import { MomentsGallery } from "@/components/MomentsGallery";
 import { homePageData, faqData } from "@/data";
 
 export default function FaqPage() {
@@ -20,7 +19,6 @@ export default function FaqPage() {
         <div className="border-t border-neutral-200/60" />
       </div>
 
-      <MomentsGallery data={homePageData.momentsGallery} />
     </div>
   );
 }

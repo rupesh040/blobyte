@@ -14,6 +14,7 @@
     "navigation": [
       { "label": "Home", "href": "/", "isActive": true },
       { "label": "About Us", "href": "/about", "isActive": false },
+      { "label": "Recipes", "href": "/recipe", "isActive": false },
       { "label": "Blog", "href": "/blog", "isActive": false },
       { "label": "Faqs", "href": "/faq", "isActive": false },
       { "label": "Contact Us", "href": "/contact", "isActive": false }

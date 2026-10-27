@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { PageBanner } from "@/components/PageBanner";
 import { About } from "@/components/About";
 import { FeaturedRecipe } from "@/components/FeaturedRecipe";
-import { MomentsGallery } from "@/components/MomentsGallery";
 import { RecipeModal } from "@/components/RecipeModal";
 import { homePageData, recipes } from "@/data";
 import type { Recipe } from "@/types/type";
@@ -23,8 +22,6 @@ export default function AboutPage() {
         recipeReference={featuredReferenceRecipe}
         onExploreRecipe={(recipe) => setSelectedRecipe(recipe)}
       />
-
-      <MomentsGallery data={homePageData.momentsGallery} />
 
       <RecipeModal
         recipe={selectedRecipe}

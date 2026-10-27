@@ -1,14 +1,18 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React from "react";
 import Image from "next/image";
-import { Clock, Users, Search, SlidersHorizontal } from "lucide-react";
+import Link from "next/link";
+import { Clock, Users, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
-import type { RecipesSectionData, Recipe, RecipeCategory } from "@/types/type";
+import type { RecipesSectionData, Recipe } from "@/types/type";
 
 interface RecipesProps {
   data: RecipesSectionData;
   onSelectRecipe: (recipe: Recipe) => void;
+  showViewMore?: boolean;
+  viewMoreHref?: string;
+  limit?: number;
 }
 
 const cardItemVariants: Variants = {
@@ -25,27 +29,16 @@ const cardItemVariants: Variants = {
   }),
 };
 
-export const Recipes: React.FC<RecipesProps> = ({ data, onSelectRecipe }) => {
-  const { kicker, title, titleAccent, subtitle, categories, items } = data;
+export const Recipes: React.FC<RecipesProps> = ({
+  data,
+  onSelectRecipe,
+  showViewMore = false,
+  viewMoreHref = "/recipe",
+  limit,
+}) => {
+  const { kicker, title, titleAccent, subtitle, items = [] } = data;
 
-  const [selectedCategory, setSelectedCategory] =
-    useState<RecipeCategory>("ALL");
-  const [searchQuery, setSearchQuery] = useState("");
-
-  const filteredRecipes = useMemo(() => {
-    return items.filter((recipe) => {
-      const matchesCategory =
-        selectedCategory === "ALL" || recipe.category === selectedCategory;
-      const matchesSearch =
-        searchQuery.trim() === "" ||
-        recipe.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        recipe.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        recipe.ingredients?.some((ing) =>
-          ing.item.toLowerCase().includes(searchQuery.toLowerCase()),
-        );
-      return matchesCategory && matchesSearch;
-    });
-  }, [items, selectedCategory, searchQuery]);
+  const displayRecipes = limit ? items.slice(0, limit) : items;
 
   return (
     <section
@@ -57,7 +50,7 @@ export const Recipes: React.FC<RecipesProps> = ({ data, onSelectRecipe }) => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6 }}
-        className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-6"
+        className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 sm:mb-12 gap-6"
       >
         <div>
           {kicker && (
@@ -79,60 +72,26 @@ export const Recipes: React.FC<RecipesProps> = ({ data, onSelectRecipe }) => {
           </h2>
         </div>
 
-        <div className="relative w-full md:w-72">
-          <input
-            type="text"
-            placeholder="Search recipes, ingredients..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-9 pr-4 py-2 text-xs font-sans bg-white border border-neutral-300 rounded-sm placeholder:text-neutral-400 focus:outline-hidden focus:border-neutral-900 transition-colors"
-          />
-          <Search className="absolute left-3 top-2.5 w-3.5 h-3.5 text-neutral-400" />
-          {searchQuery && (
-            <button
-              onClick={() => setSearchQuery("")}
-              className="absolute right-2.5 top-2.5 text-[10px] text-neutral-400 hover:text-neutral-700 uppercase cursor-pointer"
+        {showViewMore && (
+          <motion.div whileHover={{ x: 4 }} whileTap={{ scale: 0.98 }}>
+            <Link
+              href={viewMoreHref}
+              className="group inline-flex items-center justify-center font-sans tracking-[0.18em] uppercase text-xs px-6 py-3 gap-2.5 border border-neutral-800 text-neutral-900 bg-transparent hover:bg-neutral-900 hover:text-white transition-all duration-300 font-medium cursor-pointer rounded-xs"
             >
-              Clear
-            </button>
-          )}
-        </div>
+              <span>View More</span>
+              <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
+          </motion.div>
+        )}
       </motion.div>
 
-      <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-8 sm:mb-12 scrollbar-none border-b border-neutral-200/60">
-        <SlidersHorizontal className="w-3.5 h-3.5 text-neutral-400 flex-shrink-0 mr-1" />
-        {categories.map((cat) => {
-          const isActive = selectedCategory === cat;
-          return (
-            <button
-              key={cat}
-              onClick={() => setSelectedCategory(cat)}
-              className={`relative text-[11px] font-sans font-medium uppercase tracking-[0.18em] px-3.5 py-1.5 whitespace-nowrap transition-colors rounded-xs cursor-pointer ${
-                isActive
-                  ? "text-white"
-                  : "text-neutral-600 hover:text-neutral-950 hover:bg-neutral-200/50"
-              }`}
-            >
-              {isActive && (
-                <motion.span
-                  layoutId="activeCategoryBg"
-                  className="absolute inset-0 bg-neutral-900 rounded-xs -z-10"
-                  transition={{ type: "spring", stiffness: 400, damping: 30 }}
-                />
-              )}
-              {cat}
-            </button>
-          );
-        })}
-      </div>
-
-      {filteredRecipes.length > 0 ? (
+      {displayRecipes.length > 0 ? (
         <motion.div
           layout
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 sm:gap-x-8 gap-y-10 sm:gap-y-12"
         >
           <AnimatePresence mode="popLayout">
-            {filteredRecipes.map((recipe, idx) => {
+            {displayRecipes.map((recipe, idx) => {
               return (
                 <motion.article
                   layout
@@ -186,17 +145,8 @@ export const Recipes: React.FC<RecipesProps> = ({ data, onSelectRecipe }) => {
       ) : (
         <div className="text-center py-16 bg-white/50 border border-dashed border-neutral-300 rounded-sm">
           <p className="font-editorial text-2xl text-neutral-700 mb-2">
-            No recipes found
+            No recipes available
           </p>
-          <button
-            onClick={() => {
-              setSelectedCategory("ALL");
-              setSearchQuery("");
-            }}
-            className="text-xs uppercase tracking-wider underline text-neutral-900 hover:text-neutral-600 font-medium cursor-pointer"
-          >
-            Reset all filters
-          </button>
         </div>
       )}
     </section>
