@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Mail, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Mail, MapPin, Clock, ArrowRight, CheckCircle2, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import type { ContactData } from "@/types/type";
 import { contactData as defaultContactData } from "@/data";
@@ -50,6 +50,8 @@ export const Contact: React.FC<ContactProps> = ({
         return <MapPin className="w-5 h-5 stroke-[1.75]" />;
       case "clock":
         return <Clock className="w-5 h-5 stroke-[1.75]" />;
+      case "phone":
+        return <Phone className="w-5 h-5 stroke-[1.75]" />;
       default:
         return <Mail className="w-5 h-5 stroke-[1.75]" />;
     }

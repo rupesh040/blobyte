@@ -219,7 +219,7 @@ export interface FaqData {
 }
 
 export interface ContactInfoItem {
-  icon: "mail" | "location" | "clock";
+  icon: "mail" | "location" | "clock" | "phone";
   label: string;
   value: string;
   href?: string;

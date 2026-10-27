@@ -1140,9 +1140,10 @@
         "value": "Claudine Trumbull,521 Glendale Cir, Springfield, PA 19064,United States"
       },
       {
-        "icon": "clock",
-        "label": "RESPONSE TIME",
-        "value": "Within 24–48 hours"
+        "icon": "phone",
+        "label": "PHONE NUMBER",
+        "value": "+1 000-000-000",
+        "href": "tel:+1000000000"
       }
     ],
     "formTitle": "Send Us a Message"
@@ -1158,6 +1159,7 @@
     "navigation": [
       { "label": "Home", "href": "/" },
       { "label": "About Us", "href": "/about" },
+      { "label": "Recipes", "href": "/recipe", "isActive": false },
       { "label": "Blog", "href": "/blog" },
       { "label": "Faqs", "href": "/faq" },
       { "label": "Contact Us", "href": "/contact" }
