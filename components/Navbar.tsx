@@ -16,6 +16,7 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ data }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
   const pathname = usePathname();
 
   const { logo, navigation, socials } = data;
@@ -31,28 +32,109 @@ export const Navbar: React.FC<NavbarProps> = ({ data }) => {
     width: 0,
     opacity: 0,
   });
-  const isFirstRender = React.useRef(true);
+  const [isFirstRender, setIsFirstRender] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsFirstRender(false);
+    }, 120);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+      const scrollY = window.scrollY;
+      setIsScrolled(scrollY > 20);
 
-  const isItemActive = (href: string) => {
-    if (!pathname) return href === "/";
-    const current =
-      pathname.endsWith("/") && pathname.length > 1
-        ? pathname.slice(0, -1)
-        : pathname;
-    const target =
-      href.endsWith("/") && href.length > 1 ? href.slice(0, -1) : href;
-    if (target === "/") {
-      return current === "/";
+      if (pathname !== "/") return;
+
+      if (scrollY < 120) {
+        setActiveSection("home");
+        return;
+      }
+
+      if (
+        window.innerHeight + scrollY >=
+        document.documentElement.scrollHeight - 80
+      ) {
+        setActiveSection("contact");
+        return;
+      }
+
+      const sectionIds = [
+        "home",
+        "about",
+        "recipes",
+        "blog",
+        "faq",
+        "contact",
+      ];
+
+      for (let i = sectionIds.length - 1; i >= 0; i--) {
+        const id = sectionIds[i];
+        const el = document.getElementById(id);
+        if (el) {
+          const top = el.offsetTop - 140;
+          if (scrollY >= top) {
+            setActiveSection(id);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [pathname]);
+
+  const isItemActive = React.useCallback(
+    (href: string) => {
+      if (pathname === "/") {
+        const targetHash = href.includes("#") ? href.split("#")[1] : "home";
+        return (
+          activeSection === targetHash ||
+          (activeSection === "home" && (targetHash === "home" || targetHash === ""))
+        );
+      }
+      const current =
+        pathname.endsWith("/") && pathname.length > 1
+          ? pathname.slice(0, -1)
+          : pathname;
+      const target =
+        href.endsWith("/") && href.length > 1 ? href.slice(0, -1) : href;
+      if (target === "/" || target === "/#home") {
+        return current === "/";
+      }
+      return current === target || current.startsWith(target + "/");
+    },
+    [pathname, activeSection],
+  );
+
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
+    setMobileMenuOpen(false);
+    const targetId = href.includes("#") ? href.split("#")[1] : "";
+
+    if (pathname === "/") {
+      if (targetId) {
+        e.preventDefault();
+        if (targetId === "home") {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+          setActiveSection("home");
+          window.history.pushState(null, "", "/");
+        } else {
+          const el = document.getElementById(targetId);
+          if (el) {
+            el.scrollIntoView({ behavior: "smooth" });
+            setActiveSection(targetId);
+            window.history.pushState(null, "", `#${targetId}`);
+          }
+        }
+      }
     }
-    return current === target || current.startsWith(target + "/");
   };
 
   useEffect(() => {
@@ -83,28 +165,15 @@ export const Navbar: React.FC<NavbarProps> = ({ data }) => {
 
     window.addEventListener("resize", updateIndicator);
 
-    if (isFirstRender.current) {
-      const renderTimer = setTimeout(() => {
-        isFirstRender.current = false;
-      }, 80);
-      return () => {
-        cancelAnimationFrame(frameId);
-        clearTimeout(timer);
-        clearTimeout(renderTimer);
-        window.removeEventListener("resize", updateIndicator);
-      };
-    }
-
     return () => {
       cancelAnimationFrame(frameId);
       clearTimeout(timer);
       window.removeEventListener("resize", updateIndicator);
     };
-  }, [pathname, navigation]);
+  }, [navigation, isItemActive]);
 
   return (
     <motion.header
-      id="home"
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
@@ -119,9 +188,12 @@ export const Navbar: React.FC<NavbarProps> = ({ data }) => {
           <div className="flex-shrink-0">
             <Link
               href="/"
-              onClick={() => {
+              onClick={(e) => {
                 if (pathname === "/") {
+                  e.preventDefault();
                   window.scrollTo({ top: 0, behavior: "smooth" });
+                  setActiveSection("home");
+                  window.history.pushState(null, "", "/");
                 }
               }}
               className="inline-block select-none group"
@@ -139,7 +211,7 @@ export const Navbar: React.FC<NavbarProps> = ({ data }) => {
                   height={isScrolled ? 42 : 54}
                   priority
                   className={`${
-                    isScrolled ? "h-14" : "h-11 sm:h-18"
+                    isScrolled ? "h-11 sm:h-12" : "h-11 sm:h-14"
                   } w-auto object-contain transition-all duration-300 drop-shadow-2xs`}
                 />
               </motion.div>
@@ -159,19 +231,7 @@ export const Navbar: React.FC<NavbarProps> = ({ data }) => {
                     linkRefs.current[item.href] = el;
                   }}
                   href={item.href}
-                  onClick={() => {
-                    const el = linkRefs.current[item.href];
-                    if (el) {
-                      setIndicator({
-                        left: el.offsetLeft,
-                        width: el.offsetWidth,
-                        opacity: 1,
-                      });
-                    }
-                    if (isItemActive(item.href)) {
-                      window.scrollTo({ top: 0, behavior: "smooth" });
-                    }
-                  }}
+                  onClick={(e) => handleNavClick(e, item.href)}
                   className={`relative font-sans text-xs uppercase tracking-[0.2em] font-medium transition-colors pb-1.5 ${
                     isActive
                       ? "text-neutral-900 font-semibold"
@@ -193,7 +253,7 @@ export const Navbar: React.FC<NavbarProps> = ({ data }) => {
                   opacity: indicator.opacity,
                 }}
                 transition={
-                  isFirstRender.current
+                  isFirstRender
                     ? { duration: 0 }
                     : {
                         type: "spring",
@@ -246,18 +306,13 @@ export const Navbar: React.FC<NavbarProps> = ({ data }) => {
               transition={{ duration: 0.3 }}
               className="md:hidden overflow-hidden mt-4 pt-4 pb-3 border-t border-neutral-200/80 bg-[#FAF8F5]/95 backdrop-blur-md rounded-b-lg"
             >
-              <div className="flex flex-col space-y-3 px-2">
+              <div className="flex flex-col space-y-2.5 px-2">
                 {navigation.map((item) => (
                   <Link
                     key={item.label}
                     href={item.href}
-                    onClick={() => {
-                      setMobileMenuOpen(false);
-                      if (isItemActive(item.href)) {
-                        window.scrollTo({ top: 0, behavior: "smooth" });
-                      }
-                    }}
-                    className={`text-sm font-sans tracking-[0.18em] uppercase py-2 px-3 rounded-md transition-colors ${
+                    onClick={(e) => handleNavClick(e, item.href)}
+                    className={`text-sm font-sans tracking-[0.18em] uppercase py-2.5 px-3.5 rounded-lg transition-colors ${
                       isItemActive(item.href)
                         ? "bg-neutral-900 text-white font-semibold"
                         : "text-neutral-700 hover:bg-neutral-100"

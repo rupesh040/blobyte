@@ -71,6 +71,14 @@ export const BlogDetail: React.FC<BlogDetailProps> = ({ post }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
+            <Link
+              href="/#blog"
+              className="inline-flex items-center gap-1.5 text-xs font-sans uppercase tracking-[0.18em] font-semibold text-neutral-600 hover:text-neutral-950 transition-colors mb-4 group"
+            >
+              <ChevronLeft className="w-3.5 h-3.5 transition-transform group-hover:-translate-x-1" />
+              <span>Back to Blog</span>
+            </Link>
+
             <span className="text-xs font-sans uppercase tracking-[0.24em] font-semibold text-[#9A7B56] block mb-3">
               {post.category}
             </span>
@@ -337,7 +345,7 @@ export const BlogDetail: React.FC<BlogDetailProps> = ({ post }) => {
                   Explore a variety of easy, healthy and flavorful recipes for every occasion.
                 </p>
                 <Link
-                  href="/blog"
+                  href="/#recipes"
                   className="mt-5 inline-block text-[11px] font-sans font-semibold uppercase tracking-[0.18em] text-neutral-900 hover:text-[#9A7B56] border-b border-neutral-900 hover:border-[#9A7B56] pb-0.5 transition-colors"
                 >
                   Explore Recipes →

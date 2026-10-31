@@ -29,8 +29,8 @@ export const Footer: React.FC<FooterProps> = ({ data }) => {
 
   return (
     <footer
-      id="contact"
-      className="relative mt-4  bg-[#F4EFEA] overflow-hidden flex flex-col justify-end"
+      id="footer"
+      className="relative mt-4 bg-[#F4EFEA] overflow-hidden flex flex-col justify-end"
     >
       <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden">
         <motion.div
@@ -100,9 +100,19 @@ export const Footer: React.FC<FooterProps> = ({ data }) => {
               >
                 <Link
                   href={item.href}
-                  onClick={() => {
-                    if (pathname === item.href) {
-                      window.scrollTo({ top: 0, behavior: "smooth" });
+                  onClick={(e) => {
+                    const hash = item.href.includes("#")
+                      ? item.href.split("#")[1]
+                      : "";
+                    if (pathname === "/" && hash) {
+                      e.preventDefault();
+                      if (hash === "home") {
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      } else {
+                        document
+                          .getElementById(hash)
+                          ?.scrollIntoView({ behavior: "smooth" });
+                      }
                     }
                   }}
                   className="font-sans text-xs uppercase tracking-[0.2em] font-medium text-neutral-700 hover:text-neutral-950 transition-colors relative py-1 group inline-block"

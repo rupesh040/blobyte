@@ -97,7 +97,7 @@ export const BlogModal: React.FC<BlogModalProps> = ({ post, onClose }) => {
 
                 <div className="flex items-center gap-1.5 text-[#9A7B56] font-medium">
                   <Sparkles className="w-3.5 h-3.5" />
-                  <span>Culinary Journal</span>
+                  <span>Culinary Blog</span>
                 </div>
               </div>
 

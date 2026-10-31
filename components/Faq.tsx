@@ -26,7 +26,7 @@ export const Faq: React.FC<FaqProps> = ({
   return (
     <section
       id="faq"
-      className={`py-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}
+      className={`py-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24 ${className}`}
     >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-16 items-start">
         <div className="lg:col-span-5 lg:sticky lg:top-28">
@@ -215,8 +215,12 @@ export const Faq: React.FC<FaqProps> = ({
             </div>
 
             <a
-              href="/contact"
-              className="inline-flex items-center justify-center px-4 py-2 text-xs uppercase tracking-[0.16em] font-sans font-semibold rounded-full bg-neutral-900 text-white hover:bg-neutral-800 transition-colors shadow-2xs whitespace-nowrap self-stretch sm:self-auto text-center"
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="inline-flex items-center justify-center px-4 py-2 text-xs uppercase tracking-[0.16em] font-sans font-semibold rounded-full bg-neutral-900 text-white hover:bg-neutral-800 transition-colors shadow-2xs whitespace-nowrap self-stretch sm:self-auto text-center cursor-pointer"
             >
               Ask a Question
             </a>

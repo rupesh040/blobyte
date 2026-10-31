@@ -1,32 +1,5 @@
-"use client";
-
-import React, { useState } from "react";
-import { PageBanner } from "@/components/PageBanner";
-import { About } from "@/components/About";
-import { FeaturedRecipe } from "@/components/FeaturedRecipe";
-import { RecipeModal } from "@/components/RecipeModal";
-import { homePageData, recipes } from "@/data";
-import type { Recipe } from "@/types/type";
+import { redirect } from "next/navigation";
 
 export default function AboutPage() {
-  const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
-  const featuredReferenceRecipe = recipes[0];
-  return (
-    <div className="relative">
-      <PageBanner data={homePageData.pageBanner} />
-
-      <About data={homePageData.about} />
-
-      <FeaturedRecipe
-        data={homePageData.featuredRecipe}
-        recipeReference={featuredReferenceRecipe}
-        onExploreRecipe={(recipe) => setSelectedRecipe(recipe)}
-      />
-
-      <RecipeModal
-        recipe={selectedRecipe}
-        onClose={() => setSelectedRecipe(null)}
-      />
-    </div>
-  );
+  redirect("/#about");
 }

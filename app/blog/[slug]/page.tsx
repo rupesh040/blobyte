@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { PageBanner } from "@/components/PageBanner";
 import { BlogDetail } from "@/components/BlogDetail";
 import { BlogDetailSkeleton } from "@/components/BlogDetailSkeleton";
-import { getBlogPostBySlug, blogPosts, homePageData } from "@/data";
+import { getBlogPostBySlug, blogPosts } from "@/data";
 
 interface BlogDetailPageProps {
   params: Promise<{

@@ -62,7 +62,7 @@ export const Hero: React.FC<HeroProps> = ({ data = homePageData.hero }) => {
   } = data || homePageData.hero;
 
   return (
-    <section className="relative py-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="home" className="relative py-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-28">
       <div className="grid grid-cols-1 sm:grid-cols-12 gap-5 sm:gap-6 items-end mb-6">
         {cards.map((card: HeroCard, index: number) => {
           const config =
@@ -120,17 +120,28 @@ export const Hero: React.FC<HeroProps> = ({ data = homePageData.hero }) => {
           <p className="text-neutral-600 font-sans text-sm sm:text-base leading-relaxed">
             {description}
           </p>
-          {ctaHref && ctaText && (
-            <motion.div whileHover={{ x: 4 }} whileTap={{ scale: 0.98 }}>
-              <Link
-                href={ctaHref}
-                className="group inline-flex items-center justify-center font-sans tracking-[0.18em] uppercase text-xs px-6 py-3 gap-2.5 border border-neutral-800 text-neutral-900 bg-transparent hover:bg-neutral-900 hover:text-white transition-all duration-300 font-medium cursor-pointer"
-              >
-                <span>{ctaText}</span>
-                <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
-              </Link>
-            </motion.div>
-          )}
+          <div className="flex flex-wrap items-center gap-3">
+            {ctaHref && ctaText && (
+              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                <Link
+                  href={ctaHref}
+                  onClick={(e) => {
+                    const target = ctaHref.replace(/^\/?#?/, "");
+                    const el = document.getElementById(target);
+                    if (el) {
+                      e.preventDefault();
+                      el.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                  className="group inline-flex items-center justify-center font-sans tracking-[0.18em] uppercase text-xs px-6 py-3.5 gap-2.5 bg-neutral-900 text-white hover:bg-neutral-800 transition-all duration-300 font-semibold cursor-pointer rounded-lg shadow-xs"
+                >
+                  <span>{ctaText}</span>
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
+              </motion.div>
+            )}
+
+          </div>
         </div>
       </motion.div>
     </section>

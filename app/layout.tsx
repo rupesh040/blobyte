@@ -23,12 +23,12 @@ const sansFont = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "BLOBYTE — Artful Cooking, Simply Crafted | Food Journal & Recipes",
+  title: "BLOBYTE — Artful Cooking, Simply Crafted | Food Blog & Recipes",
   description:
     "Explore artisanal recipes that turn everyday cooking into art. Handcrafted recipes, seasonal ingredients, and culinary inspiration.",
   keywords: [
     "recipes",
-    "food journal",
+    "food blog",
     "cooking",
     "culinary",
     "artful cooking",

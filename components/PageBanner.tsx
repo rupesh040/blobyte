@@ -3,23 +3,18 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import type { PageBannerData, BreadcrumbItem } from "@/types/type";
 
 interface PageBannerProps {
-  data?: PageBannerData;
   title?: string;
   image?: string;
-  subtitle?: string;
-  breadcrumbs?: BreadcrumbItem[];
 }
 
 export const PageBanner: React.FC<PageBannerProps> = ({
-  data,
   title,
   image,
 }) => {
-  const displayTitle = title || data?.title || "ABOUT";
-  const displayImage = image || data?.image || "/page-banner.webp";
+  const displayTitle = title || "ABOUT";
+  const displayImage = image || "/page-banner.webp";
 
   return (
     <section className="py-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

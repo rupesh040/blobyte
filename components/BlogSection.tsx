@@ -27,8 +27,9 @@ export const BlogSection: React.FC<BlogSectionProps> = ({
   const [visibleCount, setVisibleCount] = useState(initialCount);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handlePostClick = (post: BlogPost) => {
+  const handlePostClick = (e: React.MouseEvent, post: BlogPost) => {
     if (onSelectPost) {
+      e.preventDefault();
       onSelectPost(post);
     }
   };
@@ -47,7 +48,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({
   return (
     <section
       id="blog"
-      className={`py-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}
+      className={`py-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24 ${className}`}
     >
       <motion.div
         initial={{ opacity: 0, y: 25 }}
@@ -113,7 +114,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({
             >
               <Link
                 href={`/blog/${post.slug}`}
-                onClick={() => handlePostClick(post)}
+                onClick={(e) => handlePostClick(e, post)}
                 className="group relative flex flex-col sm:flex-row overflow-hidden rounded-xl sm:rounded-2xl border border-neutral-200/80 bg-white shadow-2xs hover:shadow-card hover:border-neutral-300 transition-all duration-300 cursor-pointer h-full block"
               >
                 <div className="w-full sm:w-[48%] relative aspect-[4/3] sm:aspect-auto sm:min-h-[290px] overflow-hidden bg-neutral-100 flex-shrink-0">

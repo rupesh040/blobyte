@@ -7,13 +7,10 @@ export interface SocialLink {
 export interface NavLink {
   label: string;
   href: string;
-  isActive?: boolean;
 }
 
 export interface HeaderData {
   logo: {
-    brandName: string;
-    subtext?: string;
     image?: string;
   };
   navigation: NavLink[];
@@ -25,8 +22,6 @@ export interface HeroCard {
   title: string;
   alt: string;
   image: string;
-  caption?: string;
-  orientation?: "portrait" | "landscape" | "square";
 }
 
 export interface HeroData {
@@ -37,19 +32,6 @@ export interface HeroData {
   ctaHref: string;
 }
 
-export interface BreadcrumbItem {
-  label: string;
-  href?: string;
-}
-
-export interface PageBannerData {
-  title: string;
-  subtitle?: string;
-  image: string;
-  badge?: string;
-  breadcrumbs?: BreadcrumbItem[];
-}
-
 export interface AboutData {
   badge: string;
   title: string;
@@ -57,8 +39,6 @@ export interface AboutData {
   chefRole: string;
   chefImage: string;
   paragraphs: string[];
-  ctaText: string;
-  ctaHref: string;
 }
 
 export type RecipeCategory =
@@ -85,18 +65,11 @@ export interface Recipe {
   servings: string;
   image: string;
   description: string;
-  isFeatured?: boolean;
   difficulty?: "Easy" | "Medium" | "Advanced";
   calories?: string;
   rating?: number;
-  reviewsCount?: number;
-  author?: {
-    name: string;
-    avatar?: string;
-  };
   ingredients?: RecipeIngredient[];
   instructions?: string[];
-  tags?: string[];
 }
 
 export interface RecipesSectionData {
@@ -104,7 +77,6 @@ export interface RecipesSectionData {
   title: string;
   titleAccent: string;
   subtitle: string;
-  categories: RecipeCategory[];
   items: Recipe[];
 }
 
@@ -128,22 +100,6 @@ export interface FeaturedRecipeData {
     label: string;
     rotationClass: string;
   }>;
-}
-
-export interface MomentGalleryItem {
-  id: string;
-  image: string;
-  title: string;
-  likes: number;
-  instagramUrl: string;
-}
-
-export interface MomentsGalleryData {
-  kicker?: string;
-  title: string;
-  titleHighlight: string;
-  subtitle: string;
-  items: MomentGalleryItem[];
 }
 
 export interface BlogInstructionStep {
@@ -179,7 +135,6 @@ export interface BlogPost {
   tags?: string[];
 }
 
-
 export interface BlogSectionData {
   kicker: string;
   title: string;
@@ -190,11 +145,8 @@ export interface BlogSectionData {
 }
 
 export interface FooterData {
-  bannerImage?: string;
   footerBgImage?: string;
   logo: {
-    brandName: string;
-    subtext?: string;
     image?: string;
   };
   navigation: NavLink[];
@@ -235,24 +187,13 @@ export interface ContactData {
 }
 
 export interface ContentData {
-  site: {
-    name: string;
-    tagline: string;
-    description: string;
-    logoImage?: string;
-  };
   navbar: HeaderData;
   hero: HeroData;
-  pageBanner?: PageBannerData;
   about: AboutData;
   recipesSection: RecipesSectionData;
   featuredRecipe: FeaturedRecipeData;
-  momentsGallery: MomentsGalleryData;
   faq?: FaqData;
   blogSection?: BlogSectionData;
   contact?: ContactData;
   footer: FooterData;
 }
-
-
-

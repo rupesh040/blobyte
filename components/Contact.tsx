@@ -59,8 +59,8 @@ export const Contact: React.FC<ContactProps> = ({
 
   return (
     <section
-      id="contact-section"
-      className={`py-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}
+      id="contact"
+      className={`py-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24 ${className}`}
     >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-16 items-start">
         <motion.div

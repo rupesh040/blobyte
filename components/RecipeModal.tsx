@@ -43,10 +43,13 @@ export const RecipeModal: React.FC<RecipeModalProps> = ({
     };
   }, [recipe, onClose]);
 
-  useEffect(() => {
+  const [prevRecipeId, setPrevRecipeId] = useState<string | null>(null);
+
+  if (recipe && recipe.id !== prevRecipeId) {
+    setPrevRecipeId(recipe.id);
     setCheckedIngredients({});
     setCopied(false);
-  }, [recipe]);
+  }
 
   const toggleIngredient = (idx: number) => {
     setCheckedIngredients((prev) => ({

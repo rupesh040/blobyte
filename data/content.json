@@ -1,23 +1,33 @@
 {
-  "site": {
-    "name": "BLOBYTE",
-    "tagline": "Artful Cooking, Simply Crafted",
-    "description": "A collection of recipes that turn everyday cooking into art.",
-    "logoImage": "/logo.png"
-  },
   "navbar": {
     "logo": {
-      "brandName": "BLOBYTE",
-      "image": "/logo.png",
-      "subtext": "FOOD STORIES | RECIPES | REVIEWS"
+      "image": "/logo.png"
     },
     "navigation": [
-      { "label": "Home", "href": "/", "isActive": true },
-      { "label": "About Us", "href": "/about", "isActive": false },
-      { "label": "Recipes", "href": "/recipe", "isActive": false },
-      { "label": "Blog", "href": "/blog", "isActive": false },
-      { "label": "Faqs", "href": "/faq", "isActive": false },
-      { "label": "Contact Us", "href": "/contact", "isActive": false }
+      {
+        "label": "Home",
+        "href": "/#home"
+      },
+      {
+        "label": "About Us",
+        "href": "/#about"
+      },
+      {
+        "label": "Recipes",
+        "href": "/#recipes"
+      },
+      {
+        "label": "Blog",
+        "href": "/#blog"
+      },
+      {
+        "label": "Faqs",
+        "href": "/#faq"
+      },
+      {
+        "label": "Contact Us",
+        "href": "/#contact"
+      }
     ],
     "socials": [
       {
@@ -53,25 +63,19 @@
         "id": "hero-card-1",
         "title": "Fresh Forest Mushrooms",
         "alt": "Earthy king oyster and forest mushrooms",
-        "image": "https://images.unsplash.com/photo-1509358271058-acd22cc93898?auto=format&fit=crop&w=800&q=80",
-        "caption": "Wild Harvest",
-        "orientation": "portrait"
+        "image": "https://images.unsplash.com/photo-1509358271058-acd22cc93898?auto=format&fit=crop&w=800&q=80"
       },
       {
         "id": "hero-card-2",
         "title": "Wild Mushroom Risotto",
         "alt": "Artisan risotto bowl with fresh herbs and parmesan",
-        "image": "https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?auto=format&fit=crop&w=1000&q=80",
-        "caption": "Signature Dish",
-        "orientation": "portrait"
+        "image": "https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?auto=format&fit=crop&w=1000&q=80"
       },
       {
         "id": "hero-card-3",
         "title": "Artisanal Ribbon Pasta",
         "alt": "Freshly crafted tagliatelle pasta ribbons",
-        "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80",
-        "caption": "Handmade Daily",
-        "orientation": "portrait"
+        "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80"
       }
     ],
     "tagline": "Artful Cooking, Simply Crafted",
@@ -79,40 +83,22 @@
     "ctaText": "EXPLORE THE KITCHEN",
     "ctaHref": "#recipes"
   },
-  "pageBanner": {
-    "title": "ABOUT",
-    "subtitle": "A Food Journal with a Personal Touch",
-    "image": "/page-banner.webp",
-    "breadcrumbs": [{ "label": "Home", "href": "/" }, { "label": "About" }]
-  },
   "about": {
     "badge": "MEET THE CHEF",
-    "title": "A Food Journal with a Personal Touch",
+    "title": "A Food Blog with a Personal Touch",
     "chefName": "Elena Rostova",
     "chefRole": "Executive Chef & Recipe Developer",
     "chefImage": "/about.webp",
     "paragraphs": [
       "Welcome to my culinary sanctuary. Every dish holds a memory, and every kitchen tells an intimate story. From seasonal morning produce gathered at local markets to slow-cooked comfort classics that bring families together, here is where honest cooking thrives.",
       "Whether you are a seasoned home chef refining your technique or stepping into the kitchen for the very first time, my mission is to inspire your everyday journey with confidence, warmth, and unhurried culinary joy."
-    ],
-    "ctaText": "READ OUR STORY",
-    "ctaHref": "#about"
+    ]
   },
   "recipesSection": {
     "kicker": "FEATURED RECIPES",
     "title": "Every",
     "titleAccent": "Recipe",
     "subtitle": "Tells a Story",
-    "categories": [
-      "ALL",
-      "SOUPS",
-      "PASTA",
-      "BREAKFAST",
-      "SALADS",
-      "MAIN COURSE",
-      "DESSERTS",
-      "SNACKS"
-    ],
     "items": [
       {
         "id": "recipe-1",
@@ -123,34 +109,49 @@
         "servings": "4 SERV",
         "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&q=80",
         "description": "A velvety, earth-rich soup blending roasted cremini and shiitake mushrooms with fresh garden thyme, slow-cooked shallots, and a touch of crème fraîche.",
-        "isFeatured": true,
         "difficulty": "Easy",
         "calories": "240 kcal",
         "rating": 4.9,
-        "reviewsCount": 42,
-        "author": {
-          "name": "Elena Rostova"
-        },
         "ingredients": [
           {
             "item": "Mixed wild mushrooms (cremini, shiitake, oyster)",
             "amount": "500g"
           },
-          { "item": "Fresh thyme sprigs", "amount": "4 sprigs" },
-          { "item": "Shallots, finely chopped", "amount": "2 large" },
-          { "item": "Garlic cloves, minced", "amount": "3 cloves" },
-          { "item": "Vegetable or chicken stock", "amount": "4 cups" },
-          { "item": "Heavy cream or cashew cream", "amount": "1/2 cup" },
-          { "item": "Extra virgin olive oil", "amount": "2 tbsp" },
-          { "item": "Sea salt and cracked black pepper", "amount": "to taste" }
+          {
+            "item": "Fresh thyme sprigs",
+            "amount": "4 sprigs"
+          },
+          {
+            "item": "Shallots, finely chopped",
+            "amount": "2 large"
+          },
+          {
+            "item": "Garlic cloves, minced",
+            "amount": "3 cloves"
+          },
+          {
+            "item": "Vegetable or chicken stock",
+            "amount": "4 cups"
+          },
+          {
+            "item": "Heavy cream or cashew cream",
+            "amount": "1/2 cup"
+          },
+          {
+            "item": "Extra virgin olive oil",
+            "amount": "2 tbsp"
+          },
+          {
+            "item": "Sea salt and cracked black pepper",
+            "amount": "to taste"
+          }
         ],
         "instructions": [
           "Toss trimmed mushrooms with olive oil, fresh thyme, and salt; roast at 200°C (400°F) for 20 minutes until deeply golden.",
           "In a heavy-bottomed Dutch oven, soften diced shallots and garlic in butter over medium heat.",
           "Add roasted mushrooms, reserving a few for garnish, then pour in warm vegetable broth. Simmer for 15 minutes.",
           "Blend with an immersion blender until silken, stir in heavy cream, and season with cracked black pepper and crispy thyme leaves."
-        ],
-        "tags": ["Comfort Food", "Autumn", "Gluten-Free", "Vegetarian"]
+        ]
       },
       {
         "id": "recipe-2",
@@ -161,32 +162,41 @@
         "servings": "2 SERV",
         "image": "/classic-pasta.jpg",
         "description": "Al dente artisanal spaghetti tossed in sweet San Marzano tomato sugo, hand-torn sweet basil, cold-pressed olive oil, and aged Parmigiano Reggiano.",
-        "isFeatured": true,
         "difficulty": "Easy",
         "calories": "460 kcal",
         "rating": 4.95,
-        "reviewsCount": 68,
-        "author": {
-          "name": "Elena Rostova"
-        },
         "ingredients": [
-          { "item": "Spaghetti or bronze-die tagliatelle", "amount": "250g" },
+          {
+            "item": "Spaghetti or bronze-die tagliatelle",
+            "amount": "250g"
+          },
           {
             "item": "San Marzano whole peeled tomatoes",
             "amount": "1 can (400g)"
           },
-          { "item": "Fresh sweet basil leaves", "amount": "1 cup" },
-          { "item": "Garlic cloves, thinly sliced", "amount": "4 cloves" },
-          { "item": "Aged Parmigiano Reggiano, grated", "amount": "1/2 cup" },
-          { "item": "Extra virgin olive oil", "amount": "3 tbsp" }
+          {
+            "item": "Fresh sweet basil leaves",
+            "amount": "1 cup"
+          },
+          {
+            "item": "Garlic cloves, thinly sliced",
+            "amount": "4 cloves"
+          },
+          {
+            "item": "Aged Parmigiano Reggiano, grated",
+            "amount": "1/2 cup"
+          },
+          {
+            "item": "Extra virgin olive oil",
+            "amount": "3 tbsp"
+          }
         ],
         "instructions": [
           "Bring a large pot of heavily salted water to a rolling boil and cook spaghetti until 2 minutes shy of al dente.",
           "In a wide skillet, gently sizzle sliced garlic in olive oil until aromatic without browning.",
           "Crush tomatoes by hand into the pan, simmer for 12 minutes with a pinch of salt and a sprig of basil.",
           "Transfer pasta directly into the sauce with a splash of starchy pasta water. Emulsify over high heat and top with grated parmesan and fresh basil."
-        ],
-        "tags": ["Italian", "Quick Dinner", "Pasta", "Vegetarian"]
+        ]
       },
       {
         "id": "recipe-3",
@@ -197,35 +207,41 @@
         "servings": "1 SERV",
         "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=800&q=80",
         "description": "Crusty naturally leavened sourdough topped with citrus-mashed Hass avocado, a delicate runny poached egg, chili flakes, and microgreens.",
-        "isFeatured": false,
         "difficulty": "Easy",
         "calories": "320 kcal",
         "rating": 4.88,
-        "reviewsCount": 35,
-        "author": {
-          "name": "Elena Rostova"
-        },
         "ingredients": [
           {
             "item": "Thick slice artisanal sourdough bread",
             "amount": "1 slice"
           },
-          { "item": "Ripe Hass avocado", "amount": "1 whole" },
-          { "item": "Pasture-raised egg", "amount": "1 egg" },
-          { "item": "Fresh lemon juice", "amount": "1 tsp" },
+          {
+            "item": "Ripe Hass avocado",
+            "amount": "1 whole"
+          },
+          {
+            "item": "Pasture-raised egg",
+            "amount": "1 egg"
+          },
+          {
+            "item": "Fresh lemon juice",
+            "amount": "1 tsp"
+          },
           {
             "item": "Aleppo chili flakes or red pepper flakes",
             "amount": "1/4 tsp"
           },
-          { "item": "Microgreens and flaky sea salt", "amount": "to garnish" }
+          {
+            "item": "Microgreens and flaky sea salt",
+            "amount": "to garnish"
+          }
         ],
         "instructions": [
           "Toast sourdough until golden, crunchy, and fragrant.",
           "Mash avocado with lemon juice, sea salt, and black pepper; spread evenly across warm toast.",
           "Bring water with a dash of white vinegar to a gentle simmer, swirl a vortex, and poach the egg for 3 minutes.",
           "Place poached egg atop avocado, sprinkle with chili flakes, flaky salt, and microgreens."
-        ],
-        "tags": ["Healthy", "Breakfast", "Brunch", "Quick"]
+        ]
       },
       {
         "id": "recipe-4",
@@ -236,30 +252,45 @@
         "servings": "2 SERV",
         "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
         "description": "Herb-marinated grilled chicken breast served over fluffy tri-color quinoa with crisp cucumbers, heirloom cherry tomatoes, kalamata olives, and crumbled feta.",
-        "isFeatured": false,
         "difficulty": "Medium",
         "calories": "510 kcal",
         "rating": 4.92,
-        "reviewsCount": 54,
-        "author": {
-          "name": "Elena Rostova"
-        },
         "ingredients": [
-          { "item": "Organic chicken breast", "amount": "300g" },
-          { "item": "Cooked tri-color quinoa", "amount": "2 cups" },
-          { "item": "Persian cucumbers, sliced", "amount": "2" },
-          { "item": "Cherry tomatoes, halved", "amount": "1 cup" },
-          { "item": "Kalamata olives, pitted", "amount": "1/3 cup" },
-          { "item": "Greek feta cheese, crumbled", "amount": "60g" },
-          { "item": "Lemon herb vinaigrette", "amount": "3 tbsp" }
+          {
+            "item": "Organic chicken breast",
+            "amount": "300g"
+          },
+          {
+            "item": "Cooked tri-color quinoa",
+            "amount": "2 cups"
+          },
+          {
+            "item": "Persian cucumbers, sliced",
+            "amount": "2"
+          },
+          {
+            "item": "Cherry tomatoes, halved",
+            "amount": "1 cup"
+          },
+          {
+            "item": "Kalamata olives, pitted",
+            "amount": "1/3 cup"
+          },
+          {
+            "item": "Greek feta cheese, crumbled",
+            "amount": "60g"
+          },
+          {
+            "item": "Lemon herb vinaigrette",
+            "amount": "3 tbsp"
+          }
         ],
         "instructions": [
           "Marinate chicken in olive oil, oregano, lemon zest, garlic, and sea salt for 20 minutes.",
           "Grill chicken over medium-high heat for 6-7 minutes per side until charred and internal temp hits 74°C (165°F).",
           "Assemble bowls with warm quinoa at base, arranged with sliced chicken, cucumbers, tomatoes, and olives.",
           "Sprinkle generously with crumbled sheep’s milk feta and drizzle with fresh lemon herb vinaigrette."
-        ],
-        "tags": ["High Protein", "Salad", "Mediterranean", "Clean Eating"]
+        ]
       },
       {
         "id": "recipe-5",
@@ -270,20 +301,30 @@
         "servings": "3 SERV",
         "image": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=800&q=80",
         "description": "Wholesome flourless pancakes made from rolled oats, ripe sweet bananas, cinnamon, and organic eggs. Served warm with raw wild blossom honey.",
-        "isFeatured": false,
         "difficulty": "Easy",
         "calories": "290 kcal",
         "rating": 4.85,
-        "reviewsCount": 29,
-        "author": {
-          "name": "Elena Rostova"
-        },
         "ingredients": [
-          { "item": "Ripe bananas, peeled", "amount": "2 large" },
-          { "item": "Rolled whole oats", "amount": "1.5 cups" },
-          { "item": "Eggs", "amount": "2 whole" },
-          { "item": "Ground Ceylon cinnamon", "amount": "1/2 tsp" },
-          { "item": "Baking powder", "amount": "1 tsp" },
+          {
+            "item": "Ripe bananas, peeled",
+            "amount": "2 large"
+          },
+          {
+            "item": "Rolled whole oats",
+            "amount": "1.5 cups"
+          },
+          {
+            "item": "Eggs",
+            "amount": "2 whole"
+          },
+          {
+            "item": "Ground Ceylon cinnamon",
+            "amount": "1/2 tsp"
+          },
+          {
+            "item": "Baking powder",
+            "amount": "1 tsp"
+          },
           {
             "item": "Wild mountain honey & blueberries",
             "amount": "for topping"
@@ -294,8 +335,7 @@
           "Heat a lightly buttered skillet over medium-low heat; pour 1/4 cup batter per pancake.",
           "Cook until bubbles burst on the surface (about 2-3 minutes), then flip and cook for another 1-2 minutes.",
           "Stack tall, garnish with fresh banana slices, plump blueberries, and a generous stream of golden honey."
-        ],
-        "tags": ["Breakfast", "Naturally Sweetened", "Healthy", "Kids Favorite"]
+        ]
       },
       {
         "id": "recipe-6",
@@ -306,29 +346,41 @@
         "servings": "2 SERV",
         "image": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=800&q=80",
         "description": "Tender spiced grilled chicken over jasmine rice, paired with roasted zucchini, bell peppers, sweet red onions, and a zesty chimichurri drizzle.",
-        "isFeatured": false,
         "difficulty": "Medium",
         "calories": "580 kcal",
         "rating": 4.91,
-        "reviewsCount": 47,
-        "author": {
-          "name": "Elena Rostova"
-        },
         "ingredients": [
-          { "item": "Chicken thighs or breast", "amount": "350g" },
-          { "item": "Cooked jasmine or brown rice", "amount": "2 cups" },
-          { "item": "Zucchini, diced", "amount": "1 medium" },
-          { "item": "Red and yellow bell peppers", "amount": "2 sliced" },
-          { "item": "Smoked paprika and ground cumin", "amount": "1 tsp each" },
-          { "item": "Fresh cilantro chimichurri", "amount": "3 tbsp" }
+          {
+            "item": "Chicken thighs or breast",
+            "amount": "350g"
+          },
+          {
+            "item": "Cooked jasmine or brown rice",
+            "amount": "2 cups"
+          },
+          {
+            "item": "Zucchini, diced",
+            "amount": "1 medium"
+          },
+          {
+            "item": "Red and yellow bell peppers",
+            "amount": "2 sliced"
+          },
+          {
+            "item": "Smoked paprika and ground cumin",
+            "amount": "1 tsp each"
+          },
+          {
+            "item": "Fresh cilantro chimichurri",
+            "amount": "3 tbsp"
+          }
         ],
         "instructions": [
           "Toss diced zucchini and peppers in olive oil, paprika, salt, and roast at 210°C (410°F) for 20 minutes.",
           "Season chicken with cumin, paprika, garlic powder, and grill until juicy and lightly charred.",
           "Portion warm jasmine rice into deep ceramic bowls, arrange roasted vegetables and sliced chicken on top.",
           "Finish with freshly chopped cilantro and a spoonful of vibrant herbal chimichurri."
-        ],
-        "tags": ["Dinner", "High Protein", "Meal Prep", "Main Course"]
+        ]
       },
       {
         "id": "recipe-7",
@@ -339,29 +391,41 @@
         "servings": "12 SERV",
         "image": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=80",
         "description": "Bakery-style golden cookies boasting crisp caramelized edges, soft molten centers, bittersweet 70% dark chocolate wafers, and Maldon sea salt flakes.",
-        "isFeatured": false,
         "difficulty": "Easy",
         "calories": "210 kcal / cookie",
         "rating": 4.98,
-        "reviewsCount": 94,
-        "author": {
-          "name": "Elena Rostova"
-        },
         "ingredients": [
-          { "item": "Browned unsalted butter", "amount": "1/2 cup (115g)" },
-          { "item": "Dark brown sugar", "amount": "3/4 cup" },
-          { "item": "Granulated white sugar", "amount": "1/4 cup" },
-          { "item": "All-purpose flour", "amount": "1 1/2 cups" },
-          { "item": "70% bittersweet chocolate chunks", "amount": "180g" },
-          { "item": "Maldon sea salt flakes", "amount": "for sprinkling" }
+          {
+            "item": "Browned unsalted butter",
+            "amount": "1/2 cup (115g)"
+          },
+          {
+            "item": "Dark brown sugar",
+            "amount": "3/4 cup"
+          },
+          {
+            "item": "Granulated white sugar",
+            "amount": "1/4 cup"
+          },
+          {
+            "item": "All-purpose flour",
+            "amount": "1 1/2 cups"
+          },
+          {
+            "item": "70% bittersweet chocolate chunks",
+            "amount": "180g"
+          },
+          {
+            "item": "Maldon sea salt flakes",
+            "amount": "for sprinkling"
+          }
         ],
         "instructions": [
           "Brown butter in a saucepan until nutty and fragrant; cool slightly and whisk with sugars, egg, and vanilla.",
           "Fold in flour, baking soda, and salt until just combined; fold through dark chocolate chunks.",
           "Chill dough for at least 30 minutes. Scoop generous balls onto parchment-lined baking sheets.",
           "Bake at 180°C (350°F) for 10-12 minutes until golden on edges. Immediately sprinkle with flaky sea salt."
-        ],
-        "tags": ["Dessert", "Baking", "Chocolate", "Indulgence"]
+        ]
       },
       {
         "id": "recipe-8",
@@ -372,30 +436,45 @@
         "servings": "2 SERV",
         "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80",
         "description": "Whole wheat flatbread rolled with garlic roasted hummus, julienned rainbow carrots, baby spinach, crisp cucumbers, and purple cabbage with tahini.",
-        "isFeatured": false,
         "difficulty": "Easy",
         "calories": "270 kcal",
         "rating": 4.82,
-        "reviewsCount": 21,
-        "author": {
-          "name": "Elena Rostova"
-        },
         "ingredients": [
-          { "item": "Whole wheat wraps or tortillas", "amount": "2 large" },
-          { "item": "Creamy roasted garlic hummus", "amount": "1/2 cup" },
-          { "item": "Shredded purple cabbage", "amount": "1 cup" },
-          { "item": "Julienned carrots", "amount": "1/2 cup" },
-          { "item": "Baby spinach leaves", "amount": "1 cup" },
-          { "item": "Cucumber ribbons", "amount": "1/2 cup" },
-          { "item": "Lemon tahini drizzle", "amount": "2 tbsp" }
+          {
+            "item": "Whole wheat wraps or tortillas",
+            "amount": "2 large"
+          },
+          {
+            "item": "Creamy roasted garlic hummus",
+            "amount": "1/2 cup"
+          },
+          {
+            "item": "Shredded purple cabbage",
+            "amount": "1 cup"
+          },
+          {
+            "item": "Julienned carrots",
+            "amount": "1/2 cup"
+          },
+          {
+            "item": "Baby spinach leaves",
+            "amount": "1 cup"
+          },
+          {
+            "item": "Cucumber ribbons",
+            "amount": "1/2 cup"
+          },
+          {
+            "item": "Lemon tahini drizzle",
+            "amount": "2 tbsp"
+          }
         ],
         "instructions": [
           "Warm the whole wheat wraps slightly in a dry pan until pliable.",
           "Spread a thick layer of roasted garlic hummus across the center of each wrap.",
           "Layer baby spinach, shredded purple cabbage, julienned carrots, and cucumber ribbons.",
           "Drizzle with lemon tahini, fold sides inwards tightly, roll into a snug burrito, and slice diagonally."
-        ],
-        "tags": ["Snack", "Vegan", "Quick", "Healthy"]
+        ]
       }
     ]
   },
@@ -405,7 +484,7 @@
     "titleHighlight": "Kitchen",
     "description": "Simple ingredients crafted into delicious everyday meals.",
     "ctaText": "EXPLORE RECIPE",
-    "ctaHref": "#featured",
+    "ctaHref": "/#recipes",
     "mainCard": {
       "title": "Creamy Garlic Mushroom Pasta",
       "description": "A rich and comforting weeknight dinner ready in just 25 minutes. Made with garlic, parmesan, and fresh herbs.",
@@ -425,56 +504,6 @@
         "label": "Aged Parmigiano",
         "image": "https://images.unsplash.com/photo-1452195100486-9cc805987862?auto=format&fit=crop&w=600&q=80",
         "rotationClass": "rotate-12"
-      }
-    ]
-  },
-  "momentsGallery": {
-    "kicker": "FOLLOW ON INSTAGRAM",
-    "title": "Delicious Moments from",
-    "titleHighlight": "My Kitchen",
-    "subtitle": "Follow along for daily recipes, behind the scenes and fresh food inspiration. Let's make everyday cooking a little more special!",
-    "items": [
-      {
-        "id": "moment-1",
-        "image": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=600&q=80",
-        "title": "Sunday banana oat pancakes with fresh berries",
-        "likes": 1420,
-        "instagramUrl": "https://instagram.com"
-      },
-      {
-        "id": "moment-2",
-        "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=600&q=80",
-        "title": "Slow-simmered roasted tomato and pepper soup",
-        "likes": 985,
-        "instagramUrl": "https://instagram.com"
-      },
-      {
-        "id": "moment-3",
-        "image": "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=600&q=80",
-        "title": "Crisp sourdough toast with soft-poached egg",
-        "likes": 2150,
-        "instagramUrl": "https://instagram.com"
-      },
-      {
-        "id": "moment-4",
-        "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80",
-        "title": "Rainbow gardenF harvest salad with tahini dressing",
-        "likes": 1130,
-        "instagramUrl": "https://instagram.com"
-      },
-      {
-        "id": "moment-5",
-        "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80",
-        "title": "Double dark chocolate espresso walnut loaf",
-        "likes": 3280,
-        "instagramUrl": "https://instagram.com"
-      },
-      {
-        "id": "moment-6",
-        "image": "/classic-pasta.jpg",
-        "title": "Silky garlic butter fettuccine with fresh herbs",
-        "likes": 1845,
-        "instagramUrl": "https://instagram.com"
       }
     ]
   },
@@ -569,7 +598,12 @@
             "href": "/blog/soft-chewy-chocolate-chip-cookies"
           }
         ],
-        "tags": ["Pasta", "Dinner", "Comfort Food", "Quick Meals"]
+        "tags": [
+          "Pasta",
+          "Dinner",
+          "Comfort Food",
+          "Quick Meals"
+        ]
       },
       {
         "id": "blog-2",
@@ -655,7 +689,12 @@
             "href": "/blog/soft-chewy-chocolate-chip-cookies"
           }
         ],
-        "tags": ["Healthy", "Salad", "Plant-Based", "Gluten-Free"]
+        "tags": [
+          "Healthy",
+          "Salad",
+          "Plant-Based",
+          "Gluten-Free"
+        ]
       },
       {
         "id": "blog-3",
@@ -741,7 +780,12 @@
             "href": "/blog/soft-chewy-chocolate-chip-cookies"
           }
         ],
-        "tags": ["Breakfast", "Pancakes", "Healthy Mornings", "Gluten-Free"]
+        "tags": [
+          "Breakfast",
+          "Pancakes",
+          "Healthy Mornings",
+          "Gluten-Free"
+        ]
       },
       {
         "id": "blog-4",
@@ -827,7 +871,12 @@
             "href": "/blog/soft-chewy-chocolate-chip-cookies"
           }
         ],
-        "tags": ["Dessert", "Baking", "Cookies", "Chocolate"]
+        "tags": [
+          "Dessert",
+          "Baking",
+          "Cookies",
+          "Chocolate"
+        ]
       },
       {
         "id": "blog-5",
@@ -887,7 +936,12 @@
             "href": "/blog/power-packed-quinoa-salad-fresh-greens"
           }
         ],
-        "tags": ["Soup", "Vegetarian", "Comfort Food", "Tomato"]
+        "tags": [
+          "Soup",
+          "Vegetarian",
+          "Comfort Food",
+          "Tomato"
+        ]
       },
       {
         "id": "blog-6",
@@ -945,7 +999,12 @@
             "href": "/blog/creamy-mushroom-pasta-cozy-dinner"
           }
         ],
-        "tags": ["Bread", "Baking", "Italian", "Focaccia"]
+        "tags": [
+          "Bread",
+          "Baking",
+          "Italian",
+          "Focaccia"
+        ]
       },
       {
         "id": "blog-7",
@@ -1003,7 +1062,12 @@
             "href": "/blog/creamy-mushroom-pasta-cozy-dinner"
           }
         ],
-        "tags": ["Seafood", "Salmon", "Healthy", "Quick Meals"]
+        "tags": [
+          "Seafood",
+          "Salmon",
+          "Healthy",
+          "Quick Meals"
+        ]
       },
       {
         "id": "blog-8",
@@ -1061,7 +1125,12 @@
             "href": "/blog/chewy-brown-butter-chocolate-chip-cookies"
           }
         ],
-        "tags": ["Dessert", "Tiramisu", "Espresso", "Italian"]
+        "tags": [
+          "Dessert",
+          "Tiramisu",
+          "Espresso",
+          "Italian"
+        ]
       }
     ]
   },
@@ -1149,20 +1218,35 @@
     "formTitle": "Send Us a Message"
   },
   "footer": {
-    "bannerImage": "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1600&q=80",
     "footerBgImage": "/footer-bgs.webp",
     "logo": {
-      "brandName": "BLOBYTE",
-      "image": "/logo.png",
-      "subtext": "FOOD STORIES | RECIPES | REVIEWS"
+      "image": "/logo.png"
     },
     "navigation": [
-      { "label": "Home", "href": "/" },
-      { "label": "About Us", "href": "/about" },
-      { "label": "Recipes", "href": "/recipe", "isActive": false },
-      { "label": "Blog", "href": "/blog" },
-      { "label": "Faqs", "href": "/faq" },
-      { "label": "Contact Us", "href": "/contact" }
+      {
+        "label": "Home",
+        "href": "/#home"
+      },
+      {
+        "label": "About Us",
+        "href": "/#about"
+      },
+      {
+        "label": "Recipes",
+        "href": "/#recipes"
+      },
+      {
+        "label": "Blog",
+        "href": "/#blog"
+      },
+      {
+        "label": "Faqs",
+        "href": "/#faq"
+      },
+      {
+        "label": "Contact Us",
+        "href": "/#contact"
+      }
     ],
     "socials": [
       {
